@@ -4,7 +4,7 @@
   "hero": {
     "issue": ["Atlanta metro area and online", "Italiano · Español · Français"],
     "title": "Speak Italian, Spanish\nor French the way\nyou’ll *actually* use it",
-    "lede": "Private lessons with Valentina, a native Italian with a degree in Foreign Languages from the University of Turin, and twenty years of training teams around the world. You talk from the first lesson, in the Atlanta area or online.",
+    "lede": "Private lessons with Valentina, a native Italian with a degree in Foreign Languages from the University of Turin, and twenty years of training teams around the world. You talk from the first lesson, in the Atlanta metro area or online.",
     "primary": "Book a free 15-minute call",
     "secondary": { "label": "Meet Valentina", "href": "#about" },
     "image": "/media/placeholder/hero-lamp-table.jpg",
@@ -114,10 +114,10 @@
       { "q": "I tried before and it didn’t stick. Why would this be different?", "a": "Many courses start with rules and leave speaking for later. Here it is the other way round. You talk from the first lesson, about things you care about, and the grammar comes in when you need it." },
       { "q": "Do I need to know anything before I start?", "a": "No. You can start from zero. Tell me why you want to learn and I build the first lessons around that." },
       { "q": "How often should I take lessons?", "a": "I suggest two hours a week: enough to make progress, light enough to keep up." },
-      { "q": "In person or online, which is better?", "a": "Both work the same way. In person is nice if you are in the Atlanta area and have the time; online saves the traffic and lets you learn from anywhere." },
+      { "q": "In person or online, which is better?", "a": "Both work the same way. In person is nice if you are in the Atlanta metro area and have the time; online saves the traffic and lets you learn from anywhere." },
       { "q": "Do you teach teens and kids?", "a": "Yes. I teach adults, teens and kids. The lessons follow the student’s age, level and goals." },
       { "q": "What happens in the free 15-minute call?", "a": "You tell me why you want to learn and where you are now. By the end you know your level, the format that fits your week and what the first month looks like. No obligation." },
-      { "q": "How much do lessons cost?", "a": "There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." }
+      { "q": "How much do lessons cost?", "a": "[CONFIRM] There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." }
     ]
   }
 }

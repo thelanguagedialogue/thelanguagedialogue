@@ -44,7 +44,7 @@
     "label": "Free · 15 minutes · no obligation",
     "title": "Start with a free 15-minute call",
     "text": "Tell me why you want to learn. By the end of the call you know your level, the format that fits your week and what the first month looks like. Then you decide.",
-    "fine": "One teacher means a limited number of students. If my week is full, I’ll tell you when the next place opens."
+    "fine": "[CONFIRM] One teacher means a limited number of students. If my week is full, I’ll tell you when the next place opens."
   },
   "rhythm": "I suggest two hours a week. Enough to make real progress, light enough to keep up.",
   "formats": [
@@ -67,7 +67,7 @@
   ],
   "stats": [
     { "value": "20+", "text": "years training and coaching people in Europe, the Middle East, Russia and the US" },
-    { "value": "4", "text": "languages I work in: Italian, Spanish, French and English" },
+    { "value": "4", "text": "[CONFIRM] languages I work in: Italian, Spanish, French and English" },
     { "value": "300+", "text": "fashion stores I worked with, from Europe to the Middle East and Russia" },
     { "value": "4", "text": "language schools I teach for today" }
   ],

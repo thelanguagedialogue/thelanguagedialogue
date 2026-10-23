@@ -93,7 +93,7 @@
       { "q": "Do you teach Italian to kids and teens?", "a": "Yes. I teach adults, teens and kids, and the lessons follow the student’s age, level and goals.\n\n[EXAMPLE] Kids can start from age 6." },
       { "q": "Where do in-person lessons take place?", "a": "[EXAMPLE] At your home, at a quiet cafe near you, or at another place in the Atlanta metro area that works for both of us. Online lessons work from anywhere." },
       { "q": "Can a couple or a few friends learn together?", "a": "Yes, as a small group. You practice with each other, and the lesson stays personal.\n\n[EXAMPLE] Groups are two to four people." },
-      { "q": "How much do Italian lessons cost?", "a": "There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." },
+      { "q": "How much do Italian lessons cost?", "a": "[CONFIRM] There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." },
       { "q": "What happens in the free 15-minute call?", "a": "You tell me why you want to learn and where you are now. By the end you know your level, the format that fits your week and what the first month looks like. No obligation." }
     ]
   }
