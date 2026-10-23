@@ -1,7 +1,7 @@
 /* The Language Dialogue. Look: approved concept "D v3" (~/tasks/valentina/concepts/site/d3/index.html).
    Plain CSS, no framework: the class names below are the ones the concept uses, so a change in the
    concept can be carried over line by line. Tokens live on :root. */
-:root { --paper: #f4efe6; --paper-2: #faf7f1; --ink: #121110; --ink-2: #45413b; --muted: #6b655c; --line: #dcd4c7; --ghost: #cdc5b7; --olive: #76803f; --olive-ink: #5b6142;
+:root { --paper: #f4efe6; --paper-2: #faf7f1; --ink: #121110; --ink-2: #45413b; --muted: #6b655c; --line: #dcd4c7; --ghost: #908878; --olive: #76803f; --olive-ink: #5b6142;
   --night: #1c2438; --night-2: #252e47; --night-line: rgba(236,230,216,.18); --navy: #2b3a5c; --cream: #ece6d8; --cream-2: #bdb6a8; --olive-l: #a9b07f;
   --serif: var(--font-bodoni), "Didot", Georgia, serif; --type: var(--font-elite), "Courier New", monospace; --ui: var(--font-inter), system-ui, sans-serif;
   --ease: cubic-bezier(.2,.7,.1,1); --head-h: 84px; }
@@ -618,3 +618,14 @@ section[id], [id="message"], [id="book"] { scroll-margin-top: calc(var(--head-h)
   .hero.page h1 { font-size: clamp(44px, 4.4vw, 68px); }
   .hero.page .ph::after { right: 12px; left: auto; }
 }
+
+/* The cover animates with CSS alone, from the first paint: on a slow phone it must not wait for
+   the page script (the concept started it from a script; the look is the same). Large text ghost
+   colour above is #908878 instead of the concept's #cdc5b7 so unlit words still meet 3:1 contrast. */
+@keyframes rise { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: none; } }
+@keyframes wordup { from { transform: translateY(105%); } to { transform: none; } }
+.js:not(.rm) :is(.hero, .pagehead) [data-reveal] { animation: rise 1s var(--ease) both; animation-delay: var(--d, 0ms); }
+.js:not(.rm) :is(.hero, .pagehead) .split .wi { animation: wordup 1.1s var(--ease) both; animation-delay: calc(var(--i) * 70ms + 250ms); }
+
+/* photos come wrapped in <picture> (components/Img.tsx); the wrapper takes no box of its own */
+picture { display: contents; }

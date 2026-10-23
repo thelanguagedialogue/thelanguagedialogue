@@ -109,7 +109,7 @@ export default function Motion() {
       wa?.classList.toggle("show", past && !(cr && cr.top < vh * 0.6 && cr.bottom > vh * 0.4));
       if (!motion) { sw.forEach((s) => s.classList.add("lit")); return; }
       par.forEach((el) => {
-        const parent = el.parentElement;
+        const parent = el.closest<HTMLElement>(".frame, .bg") ?? el.parentElement;
         if (!parent) return;
         const r = parent.getBoundingClientRect();
         if (r.bottom < -200 || r.top > vh + 200) return;

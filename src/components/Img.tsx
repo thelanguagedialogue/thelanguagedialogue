@@ -41,24 +41,25 @@ export function Img({ src, alt, sizes = "100vw", priority = false, speed, style,
   if (!url) return null;
   const m = lookup(url);
   const srcSet = m?.variants.map(([w, u]) => `${u} ${w}w`).join(", ");
-  // No react-dom preload() here on purpose: Next prefetches linked pages, and their preload hints
-  // would make every page download the other pages' cover photos. The cover <img> is in the HTML
-  // with fetchpriority="high", which the browser picks up just as early.
+  // Wrapped in <picture> on purpose. React adds a preload hint for every eager <img> to the page
+  // data, and Next prefetches the pages that are linked, so a bare <img> would make every page
+  // download the other pages' cover photos. Inside <picture> React leaves the hint out; the cover
+  // is still the first image in the HTML with fetchpriority="high", so it loads just as early.
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={url}
-      srcSet={srcSet}
-      sizes={srcSet ? sizes : undefined}
-      alt={plain(alt)}
-      width={m?.w}
-      height={m?.h}
-      loading={priority ? "eager" : "lazy"}
-      decoding={priority ? "sync" : "async"}
-      fetchPriority={priority ? "high" : undefined}
-      data-speed={speed}
-      style={style}
-      className={className}
-    />
+    <picture>
+      {srcSet && <source type="image/webp" srcSet={srcSet} sizes={sizes} />}
+      <img
+        src={url}
+        alt={plain(alt)}
+        width={m?.w}
+        height={m?.h}
+        loading={priority ? "eager" : "lazy"}
+        decoding={priority ? "sync" : "async"}
+        fetchPriority={priority ? "high" : undefined}
+        data-speed={speed}
+        style={style}
+        className={className}
+      />
+    </picture>
   );
 }
