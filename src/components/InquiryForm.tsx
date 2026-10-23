@@ -3,16 +3,20 @@ import { useRef, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { track } from "@/lib/track";
 
-// The inquiry form. Static export, so Netlify's form handler takes the POST: it accepts a
-// urlencoded body on any path as long as it carries form-name and a plain HTML file in the
-// deploy declares the form. That file is public/__forms.html; every name here matches it.
+// The inquiry form, with the fields Valentina asked for on the call: name, email, phone, language,
+// level, one-on-one or group, online or in person, preferred days and times, why they want to learn.
+//
+// Netlify Forms takes the POST. The site is a static export, so Netlify learns the form from the
+// plain file public/__forms.html at deploy time, and every field name here must match that file.
+// Submissions are posted to that same file path, which works with or without Netlify's Next.js
+// runtime. Netlify then emails each inquiry to the address set under Forms > Notifications.
 
 const FORM_NAME = "inquiry";
 
 const LANGUAGES = ["Italian", "Spanish", "French (beginners)", "Not sure yet"];
-const LEVELS = ["Complete beginner", "I know some basics", "Intermediate", "Advanced"];
-const FORMATS = ["One to one", "Small group", "Either"];
-const MODES = ["In person in Atlanta", "Online", "Either"];
+const LEVELS = ["Beginner", "Intermediate", "Advanced", "Business", "Not sure yet"];
+const FORMATS = ["One-on-one", "Small group", "Not sure yet"];
+const MODES = ["In person, Atlanta metro area", "Online", "Either is fine"];
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
 
@@ -29,7 +33,7 @@ function validate(v: Values) {
   return e;
 }
 
-export default function InquiryForm({ email, gaId }: { email: string; gaId: string }) {
+export default function InquiryForm({ email, gaId, button = "Send my message", note }: { email: string; gaId: string; button?: string; note?: string }) {
   const router = useRouter();
   const [values, setValues] = useState<Values>(EMPTY);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -49,27 +53,41 @@ export default function InquiryForm({ email, gaId }: { email: string; gaId: stri
     const first = Object.keys(found)[0];
     if (first) { refs.current[first]?.focus(); return; }
     setStatus("sending");
-    const body = new URLSearchParams({ "form-name": FORM_NAME, ...values }).toString();
+    const trap = (e.currentTarget.elements.namedItem("bot-field") as HTMLInputElement | null)?.value ?? "";
+    const body = new URLSearchParams({ "form-name": FORM_NAME, "bot-field": trap, ...values }).toString();
     try {
-      const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
+      const res = await fetch("/__forms.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
       if (!res.ok) throw new Error(String(res.status));
-      track(gaId, "generate_lead", { lead_source: FORM_NAME });
+      track(gaId, "generate_lead", { lead_source: FORM_NAME, language: values.language });
       router.push("/thanks/");
     } catch {
       setStatus("error");
     }
   }
 
-  const mailto = `mailto:${email}?subject=${encodeURIComponent("Lessons inquiry")}&body=${encodeURIComponent(
-    Object.entries(values).filter(([, v]) => v.trim()).map(([k, v]) => `${k}: ${v.trim()}`).join("\n"))}`;
+  const mailto = email
+    ? `mailto:${email}?subject=${encodeURIComponent("Lessons inquiry")}&body=${encodeURIComponent(
+      Object.entries(values).filter(([, v]) => v.trim()).map(([k, v]) => `${k}: ${v.trim()}`).join("\n"))}`
+    : "";
 
-  const Err = ({ k }: { k: string }) => errors[k] ? <span className="err" id={`${k}-err`} role="alert">{errors[k]}</span> : null;
+  const Err = ({ k }: { k: string }) => (errors[k] ? <span className="err" id={`${k}-err`} role="alert">{errors[k]}</span> : null);
   const a11y = (k: string) => ({ "aria-invalid": Boolean(errors[k]), "aria-describedby": errors[k] ? `${k}-err` : undefined });
+  // a plain function, not a component, so the select keeps focus while the form re-renders
+  const select = (k: string, label: string, options: string[], required = false) => (
+    <div className="field">
+      <label htmlFor={k}>{label}{!required && <span className="opt"> (optional)</span>}</label>
+      <select id={k} name={k} value={values[k]} onChange={set(k)} ref={(el) => { refs.current[k] = el; }} {...a11y(k)}>
+        <option value="">Choose one</option>
+        {options.map((o) => <option key={o}>{o}</option>)}
+      </select>
+      <Err k={k} />
+    </div>
+  );
 
   return (
-    <form name={FORM_NAME} method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={onSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
+    <form name={FORM_NAME} method="POST" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={onSubmit} noValidate className="form">
       <input type="hidden" name="form-name" value={FORM_NAME} />
-      <p className="hidden"><label>Leave this empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
+      <p className="trap" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
 
       <div className="field">
         <label htmlFor="name">Your name</label>
@@ -82,55 +100,32 @@ export default function InquiryForm({ email, gaId }: { email: string; gaId: stri
         <Err k="email" />
       </div>
       <div className="field">
-        <label htmlFor="phone">Phone <span className="font-normal text-muted">(optional)</span></label>
+        <label htmlFor="phone">Phone <span className="opt">(optional)</span></label>
         <input id="phone" name="phone" type="tel" autoComplete="tel" value={values.phone} onChange={set("phone")} />
-        <span className="hint">If you prefer a quick call or a text.</span>
+        <span className="hint">If you prefer a call or a WhatsApp message.</span>
       </div>
+      {select("language", "Language", LANGUAGES, true)}
+      {select("level", "Your level", LEVELS)}
+      {select("format", "One-on-one or group", FORMATS)}
+      {select("mode", "In person or online", MODES)}
       <div className="field">
-        <label htmlFor="language">Language</label>
-        <select id="language" name="language" value={values.language} onChange={set("language")} ref={(el) => { refs.current.language = el; }} {...a11y("language")}>
-          <option value="">Choose one</option>
-          {LANGUAGES.map((o) => <option key={o}>{o}</option>)}
-        </select>
-        <Err k="language" />
+        <label htmlFor="availability">Preferred days and times <span className="opt">(optional)</span></label>
+        <input id="availability" name="availability" placeholder="For example: weekday evenings" value={values.availability} onChange={set("availability")} />
       </div>
-      <div className="field">
-        <label htmlFor="level">Your level</label>
-        <select id="level" name="level" value={values.level} onChange={set("level")}>
-          <option value="">Choose one</option>
-          {LEVELS.map((o) => <option key={o}>{o}</option>)}
-        </select>
-      </div>
-      <div className="field">
-        <label htmlFor="format">Lessons</label>
-        <select id="format" name="format" value={values.format} onChange={set("format")}>
-          <option value="">Choose one</option>
-          {FORMATS.map((o) => <option key={o}>{o}</option>)}
-        </select>
-      </div>
-      <div className="field">
-        <label htmlFor="mode">Where</label>
-        <select id="mode" name="mode" value={values.mode} onChange={set("mode")}>
-          <option value="">Choose one</option>
-          {MODES.map((o) => <option key={o}>{o}</option>)}
-        </select>
-      </div>
-      <div className="field">
-        <label htmlFor="availability">When are you usually free?</label>
-        <input id="availability" name="availability" placeholder="e.g. weekday evenings" value={values.availability} onChange={set("availability")} />
-      </div>
-      <div className="field sm:col-span-2">
+      <div className="field full">
         <label htmlFor="message">Why do you want to learn?</label>
-        <textarea id="message" name="message" value={values.message} onChange={set("message")} ref={(el) => { refs.current.message = el; }} {...a11y("message")} placeholder="A trip, family, work, or just because. One or two sentences is plenty." />
+        <textarea id="message" name="message" value={values.message} onChange={set("message")} ref={(el) => { refs.current.message = el; }} {...a11y("message")}
+          placeholder="A trip, family, work, a test, or just because. Booking for your child? Tell me their age." />
         <Err k="message" />
       </div>
-      <div className="sm:col-span-2 flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn btn-primary" disabled={status === "sending"}>{status === "sending" ? "Sending" : "Send my inquiry"}</button>
-        <span className="text-sm text-muted">Valentina reads every message herself.</span>
+      <div className="send">
+        <button type="submit" className="btn solid" disabled={status === "sending"}>{status === "sending" ? "Sending" : button} <span className="arr" aria-hidden="true">→</span></button>
+        {note && <span className="note">{note}</span>}
       </div>
       {status === "error" && (
-        <p className="sm:col-span-2 text-red" role="alert">
-          Something went wrong on the way. <a className="underline" href={mailto}>Send it as an email instead</a>, everything you typed is already in it.
+        <p className="fail" role="alert">
+          Something went wrong on the way.{" "}
+          {mailto ? <><a href={mailto}>Send it as an email instead</a>, everything you typed is already in it.</> : "Please try again in a minute."}
         </p>
       )}
     </form>

@@ -1,25 +1,55 @@
 {
-  "title": "Ciao, I'm Valentina",
-  "metaTitle": "About Valentina",
-  "metaDescription": "Native Italian, twenty years in fashion training people around the world, now teaching Italian and Spanish to adults in Atlanta and online.",
-  "eyebrow": "About",
-  "intro": "I'm Italian and I live in Atlanta. I teach Italian and Spanish to adults, one to one and in small groups, in person and online.",
-  "heroImage": "[EXAMPLE] /images/example-portrait.svg",
-  "heroImageAlt": "Valentina",
-  "sections": [
+  "title": "About Valentina",
+  "summary": "A native Italian who learned by doing, now teaching in Atlanta.",
+  "listed": false,
+  "service": false,
+  "metaTitle": "About Valentina Songia, Italian and Spanish Teacher",
+  "metaDescription": "A native Italian with a degree in Foreign Languages from the University of Turin and 20+ years of training people, now teaching in Atlanta and online.",
+  "hero": {
+    "issue": ["About", "Atlanta metro area and online"],
+    "title": "Taught by someone who *learned by doing*",
+    "lede": "I’m Valentina, a native Italian. I teach Italian and Spanish at all levels, and French for beginners, to adults, teens and kids, in the Atlanta metro area and online.",
+    "primary": "Book a free 15-minute call",
+    "image": "",
+    "imageAlt": ""
+  },
+  "chapters": [
     {
-      "heading": "Twenty years of teaching, before I called it that",
-      "body": "I spent twenty years in Italian fashion. My job was to travel the world and train store teams, in many countries and many languages. That is where I learned how adults really learn: by doing, in real situations, with someone who is patient and makes it fun.\n\nWhen I moved to Atlanta I started teaching the languages I love the same way. Today I teach at two private schools in the city and with my own students, in person and online."
+      "id": "story",
+      "kicker": "My story",
+      "heading": "From the shop floor to *the lesson*",
+      "body": "My name is Valentina, and I’m Italian. I studied foreign languages and communication at the University of Turin, spent a year studying English at the University of Glamorgan in Wales, and learned Spanish at Proyecto Español, a language school in Alicante.\n\nAfter that I spent seventeen years with an Italian multinational fashion company, training and coaching store teams across Europe, the Middle East and Russia. Over those years I worked with more than 300 fashion stores.\n\nNobody learns to run a shop floor from a textbook, and nobody learns to speak from one either. You learn by doing it, with someone who corrects you kindly and keeps you talking. That is how I teach.\n\nI live in Atlanta now, and I teach every lesson myself: adults, teens and kids, one-on-one and in small groups, in person or online. I also teach for four language schools.",
+      "image": "/media/placeholder/portrait-window.jpg",
+      "imageAlt": "Portrait of a woman in a green coat by a tall window",
+      "image2": "/media/placeholder/cafe-table.jpg",
+      "image2Alt": "An espresso cup and an open notebook on a cafe table",
+      "signature": true,
+      "video": true
     },
     {
-      "heading": "How I teach",
-      "body": "We talk from the first lesson. Grammar comes in when you need it. Every lesson is built around your reasons for learning: a trip, your family, your work, or simply the pleasure of it.\n\nI suggest two hours a week. It is enough to make real progress and still fit around a busy life."
+      "id": "how-i-teach",
+      "kicker": "How I teach",
+      "heading": "Your reason first, grammar *when you need it*",
+      "body": "Every student starts with a reason: a trip, a family, a job, a test, or the pleasure of it. I ask about it on the free call and build the lessons around it, so the first things you learn are the things you will say.\n\nWe talk from the first lesson. I correct you kindly and keep you talking, and grammar comes in when it helps you say what you want to say.\n\nI suggest two hours a week: enough to make real progress, light enough to keep up.",
+      "image": "/media/placeholder/hands-notebook.jpg",
+      "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
     },
     {
-      "heading": "And when you go to Italy",
-      "body": "If you are planning a trip, I can help you build an itinerary with the places tourists miss, and prepare the Italian you will need there."
+      "id": "languages",
+      "kicker": "Languages",
+      "heading": "Italian, Spanish *and French*",
+      "body": "[Italian](/italian-classes-atlanta/) is my native language. I teach it from complete beginner to business level, including preparation for the Italian language test for citizenship.\n\n[Spanish](/spanish-classes-atlanta/) I learned at Proyecto Español in Alicante. I teach it from beginner to business level too.\n\nFrench is for beginners. You start from zero and talk from the first lesson, and if you are going to France we build the lessons around your trip, the same way as [Italian for travel](/italian-for-travel/)."
     }
   ],
-  "faq": [],
-  "ctaLabel": "Get in touch"
+  "stats": true,
+  "lessons": {
+    "show": true,
+    "kicker": "How lessons work",
+    "heading": "Pick your *format*",
+    "note": "I suggest two hours a week. Enough to make real progress, light enough to keep up.",
+    "image": "/media/placeholder/lesson-group.jpg",
+    "imageAlt": "A teacher laughing with two adult students around a table"
+  },
+  "levels": { "show": false },
+  "reviews": { "show": true, "kicker": "In their words" }
 }

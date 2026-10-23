@@ -1,80 +1,93 @@
 {
-  "brandName": "[EXAMPLE] Lettera Languages",
-  "tagline": "Italian and Spanish lessons for adults, in Atlanta and online",
+  "brandName": "The Language Dialogue",
+  "tagline": "Italian and Spanish lessons for all levels, and French for beginners, in the Atlanta metro area and online.",
   "liveOrigin": "",
   "gaId": "",
   "teacher": {
-    "name": "Valentina Songia"
+    "name": "Valentina Songia",
+    "firstName": "Valentina",
+    "role": "Founder and teacher"
   },
   "contact": {
-    "email": "[EXAMPLE] hello@example.com",
-    "phone": "[EXAMPLE] +1 (404) 000-0000",
-    "instagram": "",
-    "area": "Atlanta, Georgia, and online anywhere"
+    "email": "[CONFIRM] valentina.songia@outlook.com",
+    "phone": "[CONFIRM] +1 (943) 248-9625",
+    "area": "Atlanta metro area, or online from anywhere",
+    "instagram": ""
   },
-  "languages": [
-    {
-      "name": "Italian",
-      "blurb": "With a native speaker. From your first ciao to real conversation, for daily life, family or a trip to Italy.",
-      "levels": "[EXAMPLE] Beginner to advanced"
-    },
-    {
-      "name": "Spanish",
-      "blurb": "The language Atlanta speaks second. For work, for travel, or to talk with the people around you.",
-      "levels": "[EXAMPLE] Beginner to intermediate"
-    },
-    {
-      "name": "French",
-      "blurb": "The basics for a trip or a fresh start, taught the same way: by speaking.",
-      "levels": "Beginners"
-    }
+  "links": {
+    "booking": "[EXAMPLE] https://calendly.com/your-name/15min",
+    "whatsapp": "[CONFIRM] https://wa.me/19432489625",
+    "video": "[EXAMPLE] /media/hear-me-speak.mp4"
+  },
+  "nav": [
+    { "label": "Italian", "href": "/italian-classes-atlanta/" },
+    { "label": "Spanish", "href": "/spanish-classes-atlanta/" },
+    { "label": "For travelers", "href": "/italian-for-travel/" },
+    { "label": "About", "href": "/about/" }
   ],
-  "rhythm": "We suggest two hours a week. It is enough to make real progress and still fit around work and family.",
+  "footerNav": [
+    { "label": "Italian classes", "href": "/italian-classes-atlanta/" },
+    { "label": "Spanish classes", "href": "/spanish-classes-atlanta/" },
+    { "label": "Italian for travel", "href": "/italian-for-travel/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "Contact", "href": "/contact/" },
+    { "label": "Privacy", "href": "/privacy/" }
+  ],
+  "footerLine": "Italian and Spanish lessons, French for beginners · adults, teens and kids · Atlanta metro area and online",
+  "buttons": {
+    "book": "Book a free call",
+    "bookShort": "Free call",
+    "whatsapp": "WhatsApp",
+    "message": "Send a message"
+  },
+  "cta": {
+    "label": "Free · 15 minutes · no obligation",
+    "title": "Start with a free 15-minute call",
+    "text": "Tell me why you want to learn. By the end of the call you know your level, the format that fits your week and what the first month looks like. Then you decide.",
+    "fine": "One teacher means a limited number of students. If my week is full, I’ll tell you when the next place opens."
+  },
+  "rhythm": "I suggest two hours a week. Enough to make real progress, light enough to keep up.",
   "formats": [
+    { "title": "One-on-one", "text": "The whole lesson is built around you: your goals and your pace." },
+    { "title": "Small groups", "text": "You practice with each other, and the lesson stays personal." },
+    { "title": "In person, Atlanta metro area", "text": "At a place that works for both of us." },
+    { "title": "Online", "text": "Same lessons, on video. Good when you are short on time or outside the Atlanta area." }
+  ],
+  "levelsText": "Every Italian, Spanish and French lesson is matched to your level and your age. Italian and Spanish run from beginner to business level. French is for beginners. Not sure where you stand? The [free 15-minute call](#contact) sorts that out.",
+  "levels": [
+    { "title": "Beginners", "text": "You start from zero, or from a few words you already know." },
+    { "title": "Intermediate", "text": "You get by. Now you build real conversation." },
+    { "title": "Advanced", "text": "Fluency, nuance and the culture behind the words." },
+    { "title": "Business", "text": "Meetings, calls and email in the language you work in." }
+  ],
+  "ages": [
+    { "title": "Adults", "text": "For work, travel, family or the pleasure of it." },
+    { "title": "Teens", "text": "Alongside school, at their own pace." },
+    { "title": "Kids", "text": "Lessons built around their age and what they like." }
+  ],
+  "stats": [
+    { "value": "20+", "text": "years training and coaching people in Europe, the Middle East, Russia and the US" },
+    { "value": "4", "text": "languages I work in: Italian, Spanish, French and English" },
+    { "value": "300+", "text": "fashion stores I worked with, from Europe to the Middle East and Russia" },
+    { "value": "4", "text": "language schools I teach for today" }
+  ],
+  "reviews": [
     {
-      "title": "One to one",
-      "text": "The whole lesson is built around you: your goals and your pace."
+      "quote": "[EXAMPLE] I had three years of Italian on an app and could not get through a coffee order. Two months in with Valentina, I spent a week in Puglia and never switched to English.",
+      "name": "[EXAMPLE] Sarah M., Decatur",
+      "detail": "Italian, one-on-one"
     },
     {
-      "title": "Small groups",
-      "text": "[EXAMPLE] Two to four people. You practice with each other, and the lesson stays personal."
+      "quote": "[EXAMPLE] My daughter is eleven and used to dread Spanish at school. Now she asks when Valentina is coming, and she corrects my accent at dinner.",
+      "name": "[EXAMPLE] Daniel R., Sandy Springs",
+      "detail": "Spanish for kids"
     },
     {
-      "title": "In person in Atlanta",
-      "text": "[EXAMPLE] At your home or at a place that works for both of us."
-    },
-    {
-      "title": "Online",
-      "text": "Same lessons, on video. Good when you are short on time or outside Atlanta."
+      "quote": "[EXAMPLE] I run a team in Monterrey and used to hide behind email. We practiced my real Monday call, line by line. Now I open the meeting in Spanish.",
+      "name": "[EXAMPLE] Priya K., online from Charlotte",
+      "detail": "Business Spanish"
     }
   ],
-  "showPrices": true,
-  "prices": [
-    {
-      "label": "[EXAMPLE] One to one",
-      "price": "[EXAMPLE] $55",
-      "note": "[EXAMPLE] Per hour, in person or online"
-    },
-    {
-      "label": "[EXAMPLE] Small group",
-      "price": "[EXAMPLE] $30",
-      "note": "[EXAMPLE] Per person per hour, 2 to 4 people"
-    },
-    {
-      "label": "[EXAMPLE] Travel package",
-      "price": "[EXAMPLE] $390",
-      "note": "[EXAMPLE] 8 online lessons built around your trip"
-    }
-  ],
-  "testimonials": [
-    {
-      "quote": "[EXAMPLE] After three months with Valentina I ordered dinner in Rome without switching to English once.",
-      "name": "[EXAMPLE] Sarah, Decatur"
-    },
-    {
-      "quote": "[EXAMPLE] She makes you talk from minute one. It is the only way it ever worked for me.",
-      "name": "[EXAMPLE] Michael, Buckhead"
-    }
-  ],
-  "availability": "[EXAMPLE] Weekday mornings and evenings, Saturday mornings"
+  "showPrices": false,
+  "prices": []
 }

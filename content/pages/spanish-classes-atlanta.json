@@ -1,0 +1,100 @@
+{
+  "title": "Spanish classes in Atlanta",
+  "summary": "For work, travel and family, all levels, in person or online.",
+  "listed": true,
+  "service": true,
+  "metaTitle": "Spanish Classes in Atlanta: Private and Small Group Lessons",
+  "metaDescription": "Spanish lessons for all levels in the Atlanta metro area or online. One-on-one or small groups, for work, travel and family. Book a free 15-minute call.",
+  "hero": {
+    "issue": ["Spanish lessons", "Atlanta metro area and online"],
+    "title": "Spanish classes in Atlanta, built around *your reason*",
+    "lede": "One of the world’s most spoken languages. For business, for travel, and for connecting with people across cultures and communities. Private and small-group lessons with Valentina, in person around Atlanta or online.",
+    "primary": "Book a free 15-minute call",
+    "secondary": { "label": "Who teaches", "href": "#teacher" },
+    "image": "/media/placeholder/lesson-group.jpg",
+    "imageAlt": "A teacher laughing with two adult students around a table",
+    "bar": [
+      { "label": "Levels", "value": "Beginners to business" },
+      { "label": "For", "value": "Adults, teens and kids" },
+      { "label": "Lessons", "value": "One-on-one or small groups" },
+      { "label": "Where", "value": "Atlanta metro area, or online" }
+    ]
+  },
+  "intro": {
+    "kicker": "Why people stall",
+    "text": "Maybe you took Spanish in school, or kept an app streak going for a year. Then a colleague or a neighbor speaks to you in Spanish and the words are gone. *My lessons train exactly that: answering, out loud, in real time.*"
+  },
+  "audience": {
+    "kicker": "Who it is for",
+    "heading": "Spanish for work, travel *and family*",
+    "text": "Tell me why you want to learn and the lessons follow it. A few examples:",
+    "items": [
+      { "title": "Work", "text": "Colleagues, customers or a team in Mexico City or Madrid. You want to run the meeting, make the call and write the email yourself." },
+      { "title": "Travel", "text": "Mexico, Spain, Costa Rica, Argentina. You want to order, ask for directions and chat with people along the way." },
+      { "title": "Family", "text": "A partner, in-laws or grandkids who speak Spanish. You want to be part of the conversation at the table." },
+      { "title": "Your community", "text": "Neighbors, parents at school, the people you meet every day around Atlanta. You want to talk with them in their language." },
+      { "title": "Kids and teens", "text": "Your child has Spanish at school and needs practice alongside it, at their own pace." },
+      { "title": "Starting again", "text": "You learned some Spanish years ago and it faded. We pick it up from where you are now." }
+    ]
+  },
+  "chapters": [
+    {
+      "kicker": "What a lesson looks like",
+      "heading": "Spanish about *your week*",
+      "body": "From the first lesson you speak Spanish about real things: your work, your week, the trip you are planning. I listen, correct you kindly and keep you talking. Grammar comes in when it helps you say what you want to say.\n\nIf you need Spanish for work, we practice your real situations: the Monday call, the site visit, the email to a supplier. If it is for travel or family, we practice those conversations instead.\n\nI suggest two hours a week. Enough to make real progress, light enough to keep up.",
+      "image": "/media/placeholder/cafe-table.jpg",
+      "imageAlt": "An espresso cup and an open notebook on a cafe table"
+    },
+    {
+      "id": "teacher",
+      "kicker": "Who teaches",
+      "heading": "Meet *Valentina*",
+      "body": "I’m Italian, and Spanish is one of the four languages I work in. I studied foreign languages and communication at the University of Turin, and learned Spanish at Proyecto Español, a language school in Alicante, Spain.\n\nFor seventeen years I trained and coached store teams for an Italian multinational fashion company, across Europe, the Middle East and Russia. Nobody learns to run a shop floor from a textbook, and nobody learns to speak from one either. You learn by doing it, with someone who corrects you kindly and keeps you talking.\n\nToday I live in Atlanta, I teach every lesson myself, and I also teach for four language schools.",
+      "image": "/media/placeholder/portrait.jpg",
+      "imageAlt": "Portrait of a woman in daylight by a window",
+      "button": { "label": "More about me", "href": "/about/" }
+    }
+  ],
+  "lessons": {
+    "show": true,
+    "kicker": "How Spanish lessons work",
+    "heading": "One-on-one or a small group, in person or *online*",
+    "note": "I suggest two hours a week. Enough to make real progress, light enough to keep up."
+  },
+  "band": {
+    "show": true,
+    "label": "The method, in one line",
+    "quote": "We talk from the first lesson.",
+    "accent": "Grammar comes in when you need it.",
+    "lead": "Tell me why you want to learn Spanish, and I build the lessons around it.",
+    "reasons": [
+      "To run the call with your team in Mexico City.",
+      "To talk with your in-laws in their language.",
+      "To chat with your neighbors without switching to English.",
+      "To help your kids with their Spanish homework.",
+      "To travel through Spain or Latin America and understand the answers."
+    ],
+    "image": "/media/placeholder/hands-notebook.jpg",
+    "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+  },
+  "levels": {
+    "show": true,
+    "heading": "Spanish, from beginner to *business*",
+    "text": "Spanish runs from complete beginner to business level, for adults, teens and kids. Not sure where you stand? The [free 15-minute call](#contact) sorts that out."
+  },
+  "reviews": { "show": true, "kicker": "In their words" },
+  "faq": {
+    "kicker": "Questions about Spanish",
+    "heading": "Good to *know*",
+    "items": [
+      { "q": "Do you teach Business Spanish?", "a": "Yes. Business is one of the four levels. We work on meetings, calls and email in the Spanish you use at work, with your real situations as the material." },
+      { "q": "Which Spanish do you teach, Spain or Latin America?", "a": "I learned my Spanish in Alicante, Spain.\n\n[EXAMPLE] If you need the Spanish of one country in particular, for work or family, tell me and we focus on its words and expressions." },
+      { "q": "I studied Spanish in school years ago. Where do I start?", "a": "From where you are now. On the free call we find your level, and the first lessons bring back what you already know before we build on it." },
+      { "q": "I tried before and it didn’t stick. Why would this be different?", "a": "Many courses start with rules and leave speaking for later. Here it is the other way round. You talk from the first lesson, about things you care about, and the grammar comes in when you need it." },
+      { "q": "Can colleagues or a couple take lessons together?", "a": "Yes, as a small group. You practice with each other, and the lesson stays personal.\n\n[EXAMPLE] Groups are two to four people." },
+      { "q": "Do you teach Spanish to kids and teens?", "a": "Yes. The lessons follow the student’s age, level and goals. With teens we work alongside what they do at school.\n\n[EXAMPLE] Kids can start from age 6." },
+      { "q": "Can I take Spanish lessons online?", "a": "Yes. Same lessons, on video. Good when you are short on time or outside the Atlanta area." },
+      { "q": "How much do Spanish lessons cost?", "a": "There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." }
+    ]
+  }
+}

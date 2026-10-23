@@ -8,9 +8,12 @@
 <body>
 <!--
   Netlify form definition for the inquiry form (src/components/InquiryForm.tsx).
-  The site is a static export, so Netlify's build-time parser reads this plain file to
-  register the form and its fields. Field names here MUST match the names the component
-  posts. bot-field is the honeypot: Netlify drops any submission that fills it.
+  The site is a static export, so Netlify's deploy-time parser reads this plain file to register
+  the form and its fields, and the form posts its submissions to this same path. Field names here
+  MUST match the names the component posts. bot-field is the honeypot: Netlify drops any
+  submission that fills it.
+  Fields (Valentina's list from the call): name, email, phone, language, level, format (one-on-one
+  or group), mode (in person or online), availability (preferred days and times), message (why).
 -->
 <form name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
   <input type="hidden" name="form-name" value="inquiry">
@@ -18,10 +21,10 @@
   <input type="text" name="name">
   <input type="email" name="email">
   <input type="tel" name="phone">
-  <input type="text" name="language">
-  <input type="text" name="level">
-  <input type="text" name="format">
-  <input type="text" name="mode">
+  <select name="language"><option>Italian</option><option>Spanish</option><option>French (beginners)</option><option>Not sure yet</option></select>
+  <select name="level"><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Business</option><option>Not sure yet</option></select>
+  <select name="format"><option>One-on-one</option><option>Small group</option><option>Not sure yet</option></select>
+  <select name="mode"><option>In person, Atlanta metro area</option><option>Online</option><option>Either is fine</option></select>
   <input type="text" name="availability">
   <textarea name="message"></textarea>
   <button type="submit">Send</button>

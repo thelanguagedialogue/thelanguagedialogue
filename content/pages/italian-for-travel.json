@@ -1,0 +1,104 @@
+{
+  "title": "Italian for travel",
+  "summary": "A few lessons before your trip, built around your route.",
+  "listed": true,
+  "service": true,
+  "metaTitle": "Italian for Travel: Lessons Before Your Trip to Italy",
+  "metaDescription": "A few Italian lessons before you go, built around the places you will visit and the words you will really use. Online from anywhere, or in Atlanta.",
+  "hero": {
+    "issue": ["Italian for travel", "Online from anywhere · Atlanta metro area"],
+    "title": "Italian for travel, built around *your trip*",
+    "lede": "A few lessons before you go, built around the places you will visit and the words you will really use. With Valentina, a native Italian, online from anywhere in the US or in person around Atlanta.",
+    "primary": "Book a free 15-minute call",
+    "secondary": { "label": "What you learn", "href": "#learn" },
+    "image": "/media/placeholder/train-platform.jpg",
+    "imageAlt": "A traveler walking along a train platform beside a red train",
+    "bar": [
+      { "label": "When", "value": "A few lessons before you go" },
+      { "label": "Built around", "value": "Your dates and your route" },
+      { "label": "Where", "value": "Online from anywhere, or in Atlanta" },
+      { "label": "Also", "value": "French for a trip to France" }
+    ]
+  },
+  "intro": {
+    "kicker": "Why bother",
+    "text": "You can get through Italy with English and pointing. *The trip is a different trip when you order, ask the way and chat at the market in Italian.*"
+  },
+  "audience": {
+    "kicker": "Who it is for",
+    "heading": "Lessons for *your* trip",
+    "text": "A few examples:",
+    "items": [
+      { "title": "A first trip", "text": "Rome, Florence, Venice. You want the basics that make every day easier: greetings, ordering, tickets, directions." },
+      { "title": "Two of you", "text": "A honeymoon or an anniversary. You learn together as a small group and practice on each other." },
+      { "title": "Family roots", "text": "You are visiting the town your family came from and want to talk with the people there." },
+      { "title": "Slow travel", "text": "A month in Puglia or a house in Tuscany. You want to shop, chat with the neighbors and feel at home." },
+      { "title": "Kids on the trip", "text": "Teens and kids can learn a few phrases too, at their own level, so they get more from the trip." },
+      { "title": "Going to France?", "text": "French is for beginners, and travel is included. We build those lessons around your trip the same way." }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "learn",
+      "kicker": "What you learn",
+      "heading": "The Italian you will *really use*",
+      "list": [
+        "Greetings and small talk",
+        "Ordering at the bar, the trattoria and the market",
+        "Trains, buses and tickets",
+        "Asking the way, and understanding the answer",
+        "Shops, pharmacies and hotels",
+        "The small polite phrases that make Italians smile"
+      ],
+      "body": "Everything is planned around your itinerary. If you are going to Naples and the Amalfi Coast, we use those places in the lessons: the ferry, the pizzeria, the lemon stand by the road.\n\nYou talk from the first lesson, so by the time you fly you have already said these things out loud.",
+      "image": "/media/placeholder/italian-street.jpg",
+      "imageAlt": "A quiet cobbled street in a small Italian town"
+    },
+    {
+      "kicker": "How it works",
+      "heading": "Tell me your dates, and we plan *back from there*",
+      "body": "On the free 15-minute call you tell me where you are going, when you leave and where you are starting from. We count back from your departure and agree how many lessons fit.\n\nLessons are online, on video, so they work from anywhere in the US. If you live in the Atlanta metro area, we can also meet in person. Traveling as a couple or with friends? You can learn together as a small group.\n\nI suggest two hours a week, so a few weeks before the trip is a good time to start. If your flight is sooner, tell me and we make the most of the time you have.",
+      "image": "/media/placeholder/passport-map.jpg",
+      "imageAlt": "A passport, a folded map and a key on a stone floor"
+    },
+    {
+      "id": "trips-to-italy",
+      "kicker": "Trips to Italy",
+      "heading": "Going to Italy? I can plan it *with you*",
+      "body": "Besides the lessons, I put together trips to Italy around what you want to see, taste and do. Write to me, or ask on the free call.",
+      "button": { "label": "Ask about a trip to Italy", "href": "/contact/" }
+    }
+  ],
+  "lessons": { "show": false, "kicker": "", "heading": "", "note": "" },
+  "band": {
+    "show": true,
+    "label": "Before you fly",
+    "quote": "Tell me where you are going.",
+    "accent": "I build the lessons around it.",
+    "lead": "The words you learn are the words you will need on the way.",
+    "reasons": [
+      "To order dinner in Rome without switching to English.",
+      "To buy the train ticket to Florence yourself.",
+      "To chat with the owner of your B&B in Puglia.",
+      "To ask the way in Venice and understand the answer.",
+      "To talk with your cousins in the town your family came from."
+    ],
+    "image": "/media/placeholder/hands-notebook.jpg",
+    "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+  },
+  "levels": { "show": false },
+  "reviews": { "show": true, "kicker": "In their words" },
+  "faq": {
+    "kicker": "Questions about travel lessons",
+    "heading": "Good to *know*",
+    "items": [
+      { "q": "I leave in three weeks. Is it too late?", "a": "No. Even a few lessons give you the phrases you will use every day. Tell me your date and I plan around it." },
+      { "q": "Do I need to live in Atlanta?", "a": "No. Travel lessons work online, on video, from anywhere in the US. In the Atlanta metro area we can also meet in person." },
+      { "q": "Can my partner and I learn together?", "a": "Yes. Couples, friends and families can learn as a small group and practice on each other." },
+      { "q": "How many lessons do I need?", "a": "It depends on your date and on where you start. On the free call we count back from your departure and agree a plan that fits." },
+      { "q": "Do you also help plan the trip itself?", "a": "Yes. Besides the lessons, I put together trips to Italy around what you want to see, taste and do. Ask on the free call, or write to me." },
+      { "q": "Can I learn French for a trip to France?", "a": "Yes. French is for beginners, and we build the lessons around your trip the same way." },
+      { "q": "How much do travel lessons cost?", "a": "There is no price list here because no two plans are the same: how many lessons, one-on-one or a group, in person or online. After the free call you get your price in writing, and you decide then." }
+    ]
+  }
+}
