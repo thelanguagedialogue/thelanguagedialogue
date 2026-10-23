@@ -20,6 +20,7 @@ const OUT = join(ROOT, "public", "_img");
 const MANIFEST = join(ROOT, "src", "generated", "images.json");
 const WIDTHS = [480, 800, 1200, 1600, 2000];
 const MAX = 2400;
+// small copies keep more quality (phones look closely); wide ones are big on screen, 66 is plenty
 const EXT = new Set([".jpg", ".jpeg", ".png", ".webp"]);
 
 function walk(dir, acc = []) {
@@ -49,7 +50,7 @@ for (const file of walk(MEDIA)) {
     const target = join(OUT, `${base}-${vw}-${hash}.webp`);
     if (!existsSync(target)) {
       mkdirSync(dirname(target), { recursive: true });
-      await sharp(file).rotate().resize({ width: vw, withoutEnlargement: true }).webp({ quality: 74 }).toFile(target);
+      await sharp(file).rotate().resize({ width: vw, withoutEnlargement: true }).webp({ quality: vw <= 800 ? 74 : 66, smartSubsample: true }).toFile(target);
       made++;
     }
     variants.push([vw, `/_img/${base}-${vw}-${hash}.webp`]);
