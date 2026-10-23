@@ -1,114 +1,372 @@
-# Pages CMS (pagescms.org). The client logs in with an email link, edits what is below, and
-# every save is a commit on this repo, which Netlify builds and publishes.
-# Field names must match content/site.json and content/pages/*.json exactly.
+# Pages CMS (pagescms.org): the editor Valentina uses. She logs in with an email link, edits what is
+# below, and every save is a commit on this repo, which Netlify builds and publishes in a minute.
+# Field names must match the JSON in content/ exactly (src/lib/content.ts has the same shapes).
+#
+# Writing tips shown to her in the editor (descriptions below):
+#   *words*            italic olive accent, as in the design
+#   [words](/page/)    a link
+#   blank line         new paragraph
+#   [EXAMPLE] ...      text we wrote as a stand-in: replace it and delete the tag
+#   [CONFIRM] ...      your own detail waiting for your OK: delete the tag when you are happy with it
+# The live site will not publish while any [EXAMPLE], [CONFIRM] or placeholder photo is left.
+
 media:
   input: public/media
   output: /media
-  extensions: [jpg, jpeg, png, webp, svg, mp4]
+
+components:
+  link:
+    type: object
+    fields:
+      - { name: label, label: Button text, type: string }
+      - { name: href, label: "Goes to (a page like /contact/, or a section like #faq)", type: string }
+
+  hero:
+    type: object
+    label: Top of the page
+    fields:
+      - { name: issue, label: Small lines above the headline, type: string, list: true }
+      - { name: title, label: Headline (the page's main title), type: text, description: "Put *stars* around the words in olive italics. A line break only shows on wide screens." }
+      - { name: lede, label: Paragraph under the headline, type: text }
+      - { name: primary, label: Main button text (opens your calendar), type: string }
+      - { name: secondary, label: Second button (optional), component: link }
+      - { name: image, label: Cover photo (landscape, leave empty for a plain dark top), type: image }
+      - { name: imageAlt, label: Describe the photo in a few words (for blind visitors and Google), type: string }
+      - name: bar
+        label: The four facts under the cover
+        type: object
+        list: { max: 4 }
+        fields:
+          - { name: label, label: Small label, type: string }
+          - { name: value, label: Text, type: text }
+
+  faq:
+    type: object
+    label: Questions
+    fields:
+      - { name: kicker, label: Small line above, type: string }
+      - { name: heading, label: Heading, type: string }
+      - name: items
+        label: Questions and answers
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{q}" } }
+        fields:
+          - { name: q, label: Question, type: string }
+          - { name: a, label: Answer, type: text }
+
+  band:
+    type: object
+    label: Dark band (the method and the reasons)
+    fields:
+      - { name: show, label: Show this band, type: boolean }
+      - { name: label, label: Small line above, type: string }
+      - { name: quote, label: Big line, type: string }
+      - { name: accent, label: Big line, olive part, type: string }
+      - { name: lead, label: Sentence under it, type: text }
+      - { name: reasons, label: Reasons people learn (one per line), type: string, list: true }
+      - { name: image, label: Photo, type: image }
+      - { name: imageAlt, label: Describe the photo, type: string }
 
 content:
   - name: site
     label: Site settings
-    description: Your name, contact details, languages, prices and student quotes. These show on every page.
+    description: Your contact details, the buttons, and the parts that repeat on every page (formats, levels, reviews, the contact band).
     type: file
     path: content/site.json
     format: json
     fields:
-      - name: brandName
-        label: Brand name
-        type: string
-      - name: tagline
-        label: Tagline (one line, shows in the footer and in Google)
-        type: string
-      - name: liveOrigin
-        label: Live website address (set once by YoungCaesar, for example https://yourdomain.com)
-        type: string
-      - name: gaId
-        label: Google Analytics ID (starts with G-)
-        type: string
+      - { name: brandName, label: Business name, type: string }
+      - { name: tagline, label: One line about the business (Google and the footer), type: text }
+      - { name: liveOrigin, label: Website address (set by YoungCaesar at launch), type: string, description: "For example https://thelanguagedialogue.com. Leave as it is." }
+      - { name: gaId, label: Google Analytics ID (starts with G-, set by YoungCaesar), type: string }
       - name: teacher
-        label: About you
+        label: You
         type: object
         fields:
-          - { name: name, label: Your name, type: string }
+          - { name: name, label: Full name, type: string }
+          - { name: firstName, label: First name (signature), type: string }
+          - { name: role, label: Line under the signature, type: string }
       - name: contact
         label: Contact details
         type: object
         fields:
-          - { name: email, label: Email (inquiries are sent here), type: string }
+          - { name: email, label: Email shown on the site, type: string, description: "Inquiries from the form are emailed to the address set in Netlify (Forms > Notifications)." }
           - { name: phone, label: Phone, type: string }
-          - { name: instagram, label: Instagram link, type: string }
           - { name: area, label: Where you teach (one line), type: string }
-      - name: languages
-        label: Languages
+          - { name: instagram, label: Instagram link (optional), type: string }
+      - name: links
+        label: Calendar, WhatsApp and video
         type: object
-        list: true
         fields:
-          - { name: name, label: Language, type: string }
-          - { name: blurb, label: Short description, type: text }
-          - { name: levels, label: Levels you teach, type: string }
-      - name: rhythm
-        label: How often (one or two sentences)
-        type: text
+          - { name: booking, label: Calendar link for the free 15-minute call, type: string, description: "Your Calendly or Google Calendar booking link. Empty = the button opens the contact page." }
+          - { name: whatsapp, label: WhatsApp link, type: string, description: "https://wa.me/ followed by your number with country code, digits only, e.g. https://wa.me/14045551234" }
+          - { name: video, label: "\"Hear me speak\" video", type: string, description: "Upload the video under Media, then paste its address here, e.g. /media/hear-me-speak.mp4. Empty = no button." }
+      - { name: nav, label: Menu, component: link, list: true }
+      - { name: footerNav, label: Footer links, component: link, list: true }
+      - { name: footerLine, label: Footer line, type: string }
+      - name: buttons
+        label: Button texts
+        type: object
+        fields:
+          - { name: book, label: Book button, type: string }
+          - { name: bookShort, label: Book button on phones (short), type: string }
+          - { name: whatsapp, label: WhatsApp button, type: string }
+          - { name: message, label: Message button, type: string }
+      - name: cta
+        label: Contact band at the bottom of every page
+        type: object
+        fields:
+          - { name: label, label: Small line above, type: string }
+          - { name: title, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: fine, label: Small print, type: text }
+      - { name: rhythm, label: How often (shown with the formats), type: text }
       - name: formats
         label: Lesson formats
         type: object
         list: true
         fields:
-          - { name: title, label: Title, type: string }
-          - { name: text, label: Description, type: text }
-      - name: showPrices
-        label: Show prices on the website
-        type: boolean
+          - { name: title, label: Format, type: string }
+          - { name: text, label: One line, type: text }
+      - { name: levelsText, label: Text next to the levels, type: text }
+      - name: levels
+        label: Levels
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Level, type: string }
+          - { name: text, label: One line, type: text }
+      - name: ages
+        label: Who it is for (ages)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Group, type: string }
+          - { name: text, label: One line, type: text }
+      - name: stats
+        label: Your numbers (About)
+        type: object
+        list: { max: 4 }
+        fields:
+          - { name: value, label: Number, type: string }
+          - { name: text, label: What it counts, type: text }
+      - name: reviews
+        label: Student reviews
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{name}" } }
+        description: "Two or three sentences each, with first name and the first letter of the surname, where they live, and the language and format."
+        fields:
+          - { name: quote, label: What they said, type: text }
+          - { name: name, label: "Name and place (e.g. Sarah M., Decatur)", type: string }
+          - { name: detail, label: "Language and format (e.g. Italian, one-on-one)", type: string }
+      - { name: showPrices, label: Show prices on the site, type: boolean, description: "Off for now: you send prices after the free call." }
       - name: prices
-        label: Prices
+        label: Prices (only shown when switched on above)
         type: object
         list: true
         fields:
           - { name: label, label: Name, type: string }
-          - { name: price, label: Price (for example $55), type: string }
-          - { name: note, label: Note (per hour, per person...), type: string }
-      - name: testimonials
-        label: Student quotes
+          - { name: price, label: "Price (e.g. $55)", type: string }
+          - { name: note, label: "Note (per hour, per person...)", type: string }
+
+  - name: home
+    label: Homepage
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - { name: metaTitle, label: Title in Google (60 characters at most), type: string, options: { maxlength: 60 } }
+      - { name: metaDescription, label: Description in Google (155 characters at most), type: text, options: { maxlength: 155 } }
+      - { name: hero, component: hero }
+      - name: statement
+        label: Big statement under the cover
         type: object
-        list: true
         fields:
-          - { name: quote, label: Quote, type: text }
-          - { name: name, label: Who said it (first name and neighborhood is enough), type: string }
-      - name: availability
-        label: When you are usually available
-        type: string
+          - { name: kicker, label: Small line above, type: string }
+          - { name: text, label: Statement, type: text }
+      - name: languages
+        label: Languages
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
+          - name: items
+            label: Languages
+            type: object
+            list: true
+            fields:
+              - { name: native, label: "Name in the language (e.g. Italiano)", type: string }
+              - { name: name, label: Name in English, type: string }
+              - { name: accent, label: "Olive words after the name (e.g. for beginners)", type: string }
+              - { name: phrase, label: Phrase in the language, type: string }
+              - { name: meaning, label: What it means, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: tag, label: Small tag, type: string }
+              - { name: link, label: Link to its page (optional), component: link }
+      - name: lessons
+        label: How lessons work
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: image, label: Photo, type: image }
+          - { name: imageAlt, label: Describe the photo, type: string }
+      - { name: band, component: band }
+      - name: about
+        label: About
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: body, label: Your story (blank line = new paragraph), type: text }
+          - { name: image, label: Portrait, type: image }
+          - { name: imageAlt, label: Describe the portrait, type: string }
+          - { name: image2, label: Small second photo, type: image }
+          - { name: image2Alt, label: Describe the second photo, type: string }
+          - { name: videoLabel, label: Video button text, type: string }
+      - name: levels
+        label: Levels and ages
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: agesLabel, label: Label before the ages, type: string }
+      - name: travel
+        label: For travelers
+        type: object
+        fields:
+          - { name: label, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: button, label: Button, component: link }
+          - { name: link, label: Text link, component: link }
+          - { name: image, label: Photo, type: image }
+          - { name: imageAlt, label: Describe the photo, type: string }
+      - name: trip
+        label: Trips to Italy
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text, type: text }
+          - { name: button, label: Button, component: link }
+      - name: reviews
+        label: Reviews heading
+        type: object
+        fields:
+          - { name: kicker, label: Small line above the reviews, type: string }
+      - { name: faq, component: faq }
+
+  - name: contact
+    label: Contact page
+    type: file
+    path: content/contact.json
+    format: json
+    fields:
+      - { name: metaTitle, label: Title in Google (60 characters at most), type: string, options: { maxlength: 60 } }
+      - { name: metaDescription, label: Description in Google (155 characters at most), type: text, options: { maxlength: 155 } }
+      - name: hero
+        label: Top of the page
+        type: object
+        fields:
+          - { name: issue, label: Small lines above the headline, type: string, list: true }
+          - { name: title, label: Headline, type: string }
+          - { name: lede, label: Paragraph under the headline, type: text }
+      - name: side
+        label: Next to the form
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
+          - { name: text, label: Text, type: text }
+      - name: form
+        label: The form
+        type: object
+        fields:
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text above the form, type: text }
+          - { name: button, label: Send button, type: string }
+          - { name: note, label: Note next to the button, type: string }
 
   - name: pages
     label: Pages
-    description: The text of each page. Leave a blank line between paragraphs.
+    description: "Lesson pages and About. A new page (a new service, a workshop, a trip) = Add an entry: the file name becomes its address, e.g. italian-for-kids gives /italian-for-kids/. Do not rename existing pages, Google knows their addresses."
     type: collection
     path: content/pages
     format: json
+    filename:
+      template: "{title}.json"
+      field: create
     view:
-      fields: [title]
+      primary: title
+      fields: [title, metaTitle]
     fields:
-      - { name: title, label: Headline, type: string }
-      - { name: metaTitle, label: Title in Google (under 60 characters), type: string }
-      - { name: metaDescription, label: Description in Google (under 155 characters), type: text }
-      - { name: eyebrow, label: Small line above the headline, type: string }
-      - { name: intro, label: Intro paragraph, type: text }
-      - { name: heroImage, label: Main photo, type: image }
-      - { name: heroImageAlt, label: Photo description (for accessibility), type: string }
-      - name: sections
-        label: Sections
+      - { name: title, label: Page name (menu, breadcrumb, links from other pages), type: string, required: true }
+      - { name: summary, label: One line about the page (shown in "More lessons"), type: string }
+      - { name: listed, label: "Show in \"More lessons\" on the other pages", type: boolean }
+      - { name: service, label: This page sells lessons, type: boolean, description: "Adds Google's service data, and the prices block if prices are switched on." }
+      - { name: metaTitle, label: Title in Google (60 characters at most), type: string, options: { maxlength: 60 } }
+      - { name: metaDescription, label: Description in Google (155 characters at most), type: text, options: { maxlength: 155 } }
+      - { name: hero, component: hero }
+      - name: intro
+        label: Big statement under the cover (optional)
         type: object
-        list: true
         fields:
+          - { name: kicker, label: Small line above, type: string }
+          - { name: text, label: Statement, type: text }
+      - name: audience
+        label: Who it is for (optional)
+        type: object
+        fields:
+          - { name: kicker, label: Small line above, type: string }
           - { name: heading, label: Heading, type: string }
-          - { name: body, label: Text, type: text }
-          - { name: image, label: Photo (optional), type: image }
-          - { name: imageAlt, label: Photo description, type: string }
-      - name: faq
-        label: Questions and answers
+          - { name: text, label: Text next to the heading, type: text }
+          - name: items
+            label: Cards
+            type: object
+            list: { collapsible: { collapsed: true, summary: "{title}" } }
+            fields:
+              - { name: title, label: Title, type: string }
+              - { name: text, label: Text, type: text }
+              - { name: link, label: Link (optional), component: link }
+      - name: chapters
+        label: Text sections
         type: object
-        list: true
+        list: { collapsible: { collapsed: true, summary: "{heading}" } }
         fields:
-          - { name: q, label: Question, type: string }
-          - { name: a, label: Answer, type: text }
-      - { name: ctaLabel, label: Button text, type: string }
+          - { name: id, label: "Anchor name (optional, e.g. teacher, for a link to #teacher)", type: string }
+          - { name: kicker, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: list, label: Short list (optional, one item per line), type: string, list: true }
+          - { name: body, label: Text (blank line = new paragraph), type: text }
+          - { name: image, label: Photo (optional), type: image }
+          - { name: imageAlt, label: Describe the photo, type: string }
+          - { name: image2, label: Small second photo (makes it the About collage), type: image }
+          - { name: image2Alt, label: Describe the second photo, type: string }
+          - { name: signature, label: Show your signature (About collage only), type: boolean }
+          - { name: video, label: "Show the \"Hear me speak\" button (About collage only)", type: boolean }
+          - { name: button, label: Button (optional), component: link }
+      - { name: stats, label: Show your numbers, type: boolean }
+      - name: lessons
+        label: How lessons work (formats from Site settings)
+        type: object
+        fields:
+          - { name: show, label: Show this block, type: boolean }
+          - { name: kicker, label: Small line above, type: string }
+          - { name: heading, label: Heading, type: string }
+          - { name: note, label: Note under the heading, type: text }
+          - { name: image, label: Photo (optional), type: image }
+          - { name: imageAlt, label: Describe the photo, type: string }
+      - { name: band, component: band }
+      - name: levels
+        label: Levels and ages (from Site settings)
+        type: object
+        fields:
+          - { name: show, label: Show this block, type: boolean }
+          - { name: heading, label: Heading, type: string }
+          - { name: text, label: Text next to the heading, type: text }
+      - name: reviews
+        label: Reviews (from Site settings)
+        type: object
+        fields:
+          - { name: show, label: Show the reviews, type: boolean }
+          - { name: kicker, label: Small line above, type: string }
+      - { name: faq, component: faq }
