@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Brand tokens. Dark, a little industrial, typewriter display type: what the client asked
+   for on the call. Names (not hexes) are what components use, so the palette can move
+   once the logo is final without touching a page. */
+:root {
+  --paper: #efeae0;
+  --paper-2: #f8f5ee;
+  --ink: #151515;
+  --ink-2: #3a3631;
+  --muted: #6d675d;
+  --line: #d6cfc1;
+  --olive: #5b6142;
+  --olive-2: #46492f;
+  --red: #7a2a26;
+  --navy: #233044;
+  --accent: var(--olive);
+  --accent-ink: #ffffff;
+  --example: #c9a227;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-olive: var(--olive);
+  --color-olive-2: var(--olive-2);
+  --color-red: var(--red);
+  --color-navy: var(--navy);
+  --font-display: var(--font-display), "Courier New", monospace;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.005em; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.04; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.12; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.2; }
+
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+
+/* Example content, previews only. components/Ex.tsx renders plain text on the live site,
+   and scripts/example-gate.mjs blocks a live build while any marker is left in content/. */
+.ex {
+  display: inline-block;
+  outline: 2px dashed var(--example);
+  outline-offset: 3px;
+  position: relative;
+  border-radius: 2px;
+  margin-top: .6em;
+}
+.ex::after {
+  content: "EXAMPLE";
+  position: absolute;
+  top: -0.9em;
+  right: -0.25em;
+  font: 600 10px/1 var(--font-body);
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: var(--example);
+  padding: 2px 5px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.ex-block { display: block; outline-offset: -3px; margin-top: 0; }
+.ex-block::after { top: 10px; right: 10px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 48px; padding: .8rem 1.4rem;
+  font-weight: 600; font-size: 1rem; line-height: 1;
+  border-radius: 2px; border: 2px solid transparent;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:hover { background: var(--olive-2); border-color: var(--olive-2); }
+.btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--paper); }
+.btn-paper { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.btn-paper:hover { background: #ffffff; }
+
+.rule { border-top: 1px solid var(--line); }
+.prose p + p { margin-top: 1em; }
+
+.field { display: grid; gap: .4rem; }
+.field label { font-weight: 600; font-size: .95rem; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 48px; padding: .7rem .9rem;
+  background: #fff; border: 1.5px solid #8f887b; border-radius: 2px;
+  font: inherit; color: var(--ink);
+}
+.field textarea { min-height: 140px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--navy); outline: none; box-shadow: 0 0 0 3px rgba(35, 48, 68, .18); }
+.field .err { color: var(--red); font-size: .9rem; }
+.field .hint { color: var(--muted); font-size: .9rem; }

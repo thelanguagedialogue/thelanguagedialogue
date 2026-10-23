@@ -1,0 +1,80 @@
+{
+  "brandName": "[EXAMPLE] Lettera Languages",
+  "tagline": "Italian and Spanish lessons for adults, in Atlanta and online",
+  "liveOrigin": "",
+  "gaId": "",
+  "teacher": {
+    "name": "Valentina Songia"
+  },
+  "contact": {
+    "email": "[EXAMPLE] hello@example.com",
+    "phone": "[EXAMPLE] +1 (404) 000-0000",
+    "instagram": "",
+    "area": "Atlanta, Georgia, and online anywhere"
+  },
+  "languages": [
+    {
+      "name": "Italian",
+      "blurb": "With a native speaker. From your first ciao to real conversation, for daily life, family or a trip to Italy.",
+      "levels": "[EXAMPLE] Beginner to advanced"
+    },
+    {
+      "name": "Spanish",
+      "blurb": "The language Atlanta speaks second. For work, for travel, or to talk with the people around you.",
+      "levels": "[EXAMPLE] Beginner to intermediate"
+    },
+    {
+      "name": "French",
+      "blurb": "The basics for a trip or a fresh start, taught the same way: by speaking.",
+      "levels": "Beginners"
+    }
+  ],
+  "rhythm": "We suggest two hours a week. It is enough to make real progress and still fit around work and family.",
+  "formats": [
+    {
+      "title": "One to one",
+      "text": "The whole lesson is built around you: your goals and your pace."
+    },
+    {
+      "title": "Small groups",
+      "text": "[EXAMPLE] Two to four people. You practice with each other, and the lesson stays personal."
+    },
+    {
+      "title": "In person in Atlanta",
+      "text": "[EXAMPLE] At your home or at a place that works for both of us."
+    },
+    {
+      "title": "Online",
+      "text": "Same lessons, on video. Good when you are short on time or outside Atlanta."
+    }
+  ],
+  "showPrices": true,
+  "prices": [
+    {
+      "label": "[EXAMPLE] One to one",
+      "price": "[EXAMPLE] $55",
+      "note": "[EXAMPLE] Per hour, in person or online"
+    },
+    {
+      "label": "[EXAMPLE] Small group",
+      "price": "[EXAMPLE] $30",
+      "note": "[EXAMPLE] Per person per hour, 2 to 4 people"
+    },
+    {
+      "label": "[EXAMPLE] Travel package",
+      "price": "[EXAMPLE] $390",
+      "note": "[EXAMPLE] 8 online lessons built around your trip"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "[EXAMPLE] After three months with Valentina I ordered dinner in Rome without switching to English once.",
+      "name": "[EXAMPLE] Sarah, Decatur"
+    },
+    {
+      "quote": "[EXAMPLE] She makes you talk from minute one. It is the only way it ever worked for me.",
+      "name": "[EXAMPLE] Michael, Buckhead"
+    }
+  ],
+  "availability": "[EXAMPLE] Weekday mornings and evenings, Saturday mornings"
+}

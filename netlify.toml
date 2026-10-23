@@ -1,0 +1,35 @@
+# Built by Netlify from the GitHub repo on every push (and on every save in Pages CMS).
+# Manual deploys from a laptop: netlify deploy --no-build --dir=out --site=<id> (never --dir=.)
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# The noindex on previews is not a header here on purpose: lib/site.ts answers noindex on
+# every page and robots.txt disallows everything unless the build is the production context
+# on the live domain, so there is no "remove this line at launch" step to forget.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

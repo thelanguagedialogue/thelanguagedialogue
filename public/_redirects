@@ -1,0 +1,8 @@
+# Netlify redirects. First match wins. The forced 404s make sure nothing that is not a page
+# is ever served from the deploy, even if a file slips into out/.
+/*.md        /404/   404!
+/*.mjs       /404/   404!
+/*.py        /404/   404!
+/.env*       /404/   404!
+/.git/*      /404/   404!
+/content/*   /404/   404!

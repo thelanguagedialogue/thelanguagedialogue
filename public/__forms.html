@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>Form definitions</title>
+</head>
+<body>
+<!--
+  Netlify form definition for the inquiry form (src/components/InquiryForm.tsx).
+  The site is a static export, so Netlify's build-time parser reads this plain file to
+  register the form and its fields. Field names here MUST match the names the component
+  posts. bot-field is the honeypot: Netlify drops any submission that fills it.
+-->
+<form name="inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="inquiry">
+  <input type="text" name="bot-field">
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <input type="text" name="language">
+  <input type="text" name="level">
+  <input type="text" name="format">
+  <input type="text" name="mode">
+  <input type="text" name="availability">
+  <textarea name="message"></textarea>
+  <button type="submit">Send</button>
+</form>
+</body>
+</html>

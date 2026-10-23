@@ -1,0 +1,25 @@
+{
+  "title": "Ciao, I'm Valentina",
+  "metaTitle": "About Valentina",
+  "metaDescription": "Native Italian, twenty years in fashion training people around the world, now teaching Italian and Spanish to adults in Atlanta and online.",
+  "eyebrow": "About",
+  "intro": "I'm Italian and I live in Atlanta. I teach Italian and Spanish to adults, one to one and in small groups, in person and online.",
+  "heroImage": "[EXAMPLE] /images/example-portrait.svg",
+  "heroImageAlt": "Valentina",
+  "sections": [
+    {
+      "heading": "Twenty years of teaching, before I called it that",
+      "body": "I spent twenty years in Italian fashion. My job was to travel the world and train store teams, in many countries and many languages. That is where I learned how adults really learn: by doing, in real situations, with someone who is patient and makes it fun.\n\nWhen I moved to Atlanta I started teaching the languages I love the same way. Today I teach at two private schools in the city and with my own students, in person and online."
+    },
+    {
+      "heading": "How I teach",
+      "body": "We talk from the first lesson. Grammar comes in when you need it. Every lesson is built around your reasons for learning: a trip, your family, your work, or simply the pleasure of it.\n\nI suggest two hours a week. It is enough to make real progress and still fit around a busy life."
+    },
+    {
+      "heading": "And when you go to Italy",
+      "body": "If you are planning a trip, I can help you build an itinerary with the places tourists miss, and prepare the Italian you will need there."
+    }
+  ],
+  "faq": [],
+  "ctaLabel": "Get in touch"
+}
