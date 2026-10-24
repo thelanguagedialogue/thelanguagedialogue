@@ -17,6 +17,8 @@ export type Mark = "example" | "confirm" | null;
 
 export interface Cell { label: string; value: string }
 export interface Item { title: string; text: string }
+/** One step of "Pick your format": a question and the two choices. */
+export interface FormatStep { title: string; options: Item[] }
 export interface Faq { q: string; a: string }
 export interface Link { label: string; href: string }
 export interface Review { quote: string; name: string; detail: string }
@@ -37,7 +39,8 @@ export interface SiteContent {
   buttons: { book: string; bookShort: string; whatsapp: string; message: string };
   cta: { label: string; title: string; text: string; fine: string };
   rhythm: string;
-  formats: Item[];
+  formats: FormatStep[];
+  formatsNote: string;
   levels: Item[];
   levelsText: string;
   ages: Item[];

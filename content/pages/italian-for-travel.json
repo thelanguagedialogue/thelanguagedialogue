@@ -17,7 +17,7 @@
       { "label": "When", "value": "A few lessons before you go" },
       { "label": "Built around", "value": "Your dates and your route" },
       { "label": "Where", "value": "Online from anywhere, or in Atlanta" },
-      { "label": "Also", "value": "French for a trip to France" }
+      { "label": "Also", "value": "Spanish or French for your trip" }
     ]
   },
   "intro": {
@@ -34,7 +34,7 @@
       { "title": "Family roots", "text": "You are visiting the town your family came from and want to talk with the people there." },
       { "title": "Slow travel", "text": "A month in Puglia or a house in Tuscany. You want to shop, chat with the neighbors and feel at home." },
       { "title": "Kids on the trip", "text": "Teens and kids can learn a few phrases too, at their own level, so they get more from the trip." },
-      { "title": "Going to France?", "text": "French is for beginners, and travel is included. We build those lessons around your trip the same way." }
+      { "title": "Spain or France?", "text": "Spanish for your trip works the same way, from Madrid to Mexico City. French too, for beginners." }
     ]
   },
   "chapters": [
@@ -97,6 +97,7 @@
       { "q": "Can my partner and I learn together?", "a": "Yes. Couples, friends and families can learn as a small group and practice on each other." },
       { "q": "How many lessons do I need?", "a": "It depends on your date and on where you start. On the free call we count back from your departure and agree a plan that fits." },
       { "q": "Do you also help plan the trip itself?", "a": "Yes. Besides the lessons, I put together trips to Italy around what you want to see, taste and do. Ask on the free call, or write to me." },
+      { "q": "Can I learn Spanish for my trip?", "a": "Yes. Spanish travel lessons work the same way, built around your dates and your route, whether you are going to Spain or Latin America." },
       { "q": "Can I learn French for a trip to France?", "a": "Yes. French is for beginners, and we build the lessons around your trip the same way." },
       { "q": "How much do travel lessons cost?", "a": "[CONFIRM] There is no price list here because no two plans are the same: how many lessons, one-on-one or a group, in person or online. After the free call you get your price in writing, and you decide then." }
     ]

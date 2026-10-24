@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { CSSProperties, ReactNode } from "react";
+import { Fragment, type CSSProperties, type ReactNode } from "react";
 import { site, parse, type Hero as HeroT, type Item, type Faq as FaqT, type Chapter as ChapterT, type Band as BandT, type Link as LinkT } from "@/lib/content";
 import { IS_LIVE } from "@/lib/site";
 import { bookAct, whatsappAct, messageAct, videoAct, linkAct } from "@/lib/links";
@@ -139,7 +139,8 @@ export function Languages({ kicker, items }: { kicker: string; items: Lang[] }) 
   );
 }
 
-/** "How lessons work": the four formats from site settings, with the rhythm note. */
+/** "How lessons work": two steps from site settings (who is in the lesson, then where), each a
+    choice of two, with the rhythm note. Four rows in a list read as four separate options. */
 export function Lessons({ id, kicker, heading, note, image, imageAlt }: { id?: string; kicker: string; heading: string; note?: string; image?: string; imageAlt?: string }) {
   const img = parse(image).text;
   return (
@@ -155,10 +156,22 @@ export function Lessons({ id, kicker, heading, note, image, imageAlt }: { id?: s
             </figure>
           )}
         </div>
-        <div className="rows">
-          {site.formats.map((f, i) => (
-            <div className="row" data-reveal="" key={f.title}><span className="n">{n2(i)}</span><b><T v={f.title} /></b><span><T v={f.text} /></span></div>
+        <div className="steps">
+          {site.formats.map((s, i) => (
+            <div className="step" data-reveal="" key={s.title}>
+              <span className="n" aria-hidden="true">{n2(i)}</span>
+              <div className="step-head"><span className="caps lab">Step {i + 1}</span><h3><T v={s.title} /></h3></div>
+              <div className="pick">
+                {s.options.map((o, j) => (
+                  <Fragment key={o.title}>
+                    {j > 0 && <span className="or">or</span>}
+                    <div className="opt"><b><T v={o.title} /></b><span><T v={o.text} /></span></div>
+                  </Fragment>
+                ))}
+              </div>
+            </div>
           ))}
+          {site.formatsNote && <p className="mix" data-reveal=""><T v={site.formatsNote} /></p>}
         </div>
       </div>
     </section>

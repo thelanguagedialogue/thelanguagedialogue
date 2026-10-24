@@ -70,7 +70,7 @@ components:
 content:
   - name: site
     label: Site settings
-    description: Your contact details, the buttons, and the parts that repeat on every page (formats, levels, reviews, the contact band).
+    description: Your contact details, the buttons, and the parts that repeat on every page (lesson formats, levels, reviews, the contact band).
     type: file
     path: content/site.json
     format: json
@@ -122,12 +122,19 @@ content:
           - { name: fine, label: Small print, type: text }
       - { name: rhythm, label: How often (shown with the formats), type: text }
       - name: formats
-        label: Lesson formats
+        label: Lesson formats (two steps, two choices each)
         type: object
         list: true
         fields:
-          - { name: title, label: Format, type: string }
-          - { name: text, label: One line, type: text }
+          - { name: title, label: Step question, type: string }
+          - name: options
+            label: Choices
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Choice, type: string }
+              - { name: text, label: One line, type: text }
+      - { name: formatsNote, label: Line under the steps, type: text }
       - { name: levelsText, label: Text next to the levels, type: text }
       - name: levels
         label: Levels

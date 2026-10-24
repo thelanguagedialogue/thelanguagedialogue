@@ -93,7 +93,7 @@
   },
   "travel": {
     "label": "For travelers",
-    "heading": "Italian or French *for your trip*",
+    "heading": "Italian, Spanish or French *for your trip*",
     "text": "A few lessons before you go, built around the places you will visit and the words you will really use. Tell me your travel dates and we plan the lessons back from there.",
     "button": { "label": "Ask about your trip", "href": "/contact/" },
     "link": { "label": "How travel lessons work", "href": "/italian-for-travel/" },

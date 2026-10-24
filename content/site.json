@@ -48,11 +48,22 @@
   },
   "rhythm": "I suggest two hours a week. Enough to make real progress, light enough to keep up.",
   "formats": [
-    { "title": "One-on-one", "text": "The whole lesson is built around you: your goals and your pace." },
-    { "title": "Small groups", "text": "You practice with each other, and the lesson stays personal." },
-    { "title": "In person, Atlanta metro area", "text": "At a place that works for both of us." },
-    { "title": "Online", "text": "Same lessons, on video. Good when you are short on time or outside the Atlanta area." }
+    {
+      "title": "Just you, or a small group?",
+      "options": [
+        { "title": "One-on-one", "text": "The whole lesson is built around you: your goals and your pace." },
+        { "title": "Small group", "text": "You practice with each other, and the lesson stays personal." }
+      ]
+    },
+    {
+      "title": "In person, or online?",
+      "options": [
+        { "title": "In person", "text": "In the Atlanta metro area, at a place that works for both of us." },
+        { "title": "Online", "text": "Same lessons, on video. Good when you are short on time or outside the Atlanta area." }
+      ]
+    }
   ],
+  "formatsNote": "Any mix works: one-on-one online, a small group in person, or the other way round.",
   "levelsText": "Every Italian, Spanish and French lesson is matched to your level and your age. Italian and Spanish run from beginner to business level. French is for beginners. Not sure where you stand? The [free 15-minute call](#contact) sorts that out.",
   "levels": [
     { "title": "Beginners", "text": "You start from zero, or from a few words you already know." },
