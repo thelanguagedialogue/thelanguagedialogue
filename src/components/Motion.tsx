@@ -26,6 +26,11 @@ export default function Motion() {
       offs.push(() => t.removeEventListener(ev, fn, opt));
     };
 
+    // a link to a section (/#how): that section is already shown, so mark it revealed. The first
+    // click takes "jump" off, so links inside the page scroll smoothly again.
+    document.querySelector(":target")?.querySelectorAll("[data-reveal], .split").forEach((el) => el.classList.add("in"));
+    if (root.classList.contains("jump")) on(document, "click", () => root.classList.remove("jump"), { capture: true, once: true });
+
     // preview notes + video dialog. Capture phase, so it runs before any link navigation.
     const toast = document.querySelector<HTMLElement>(".toast");
     let tt: number | undefined;

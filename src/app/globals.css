@@ -319,6 +319,11 @@ footer .fine { color: var(--ink-2); font-size: 14px; }
 .js:not(.rm) [data-reveal="clip"] { opacity: 1; transform: none; }
 .js:not(.rm) [data-reveal="clip"] img { clip-path: inset(100% 0 0 0); scale: 1.15; transition: clip-path 1.4s var(--ease), scale 1.8s var(--ease); transition-delay: var(--d, 0ms); }
 .js:not(.rm) [data-reveal="clip"].in img { clip-path: inset(0 0 0 0); scale: 1; }
+/* arriving on a link to a section (/#how): land on it at once, and show it from the first paint */
+html.jump { scroll-behavior: auto; }
+.js.jump :target [data-reveal] { opacity: 1; transform: none; transition: none; }
+.js.jump :target [data-reveal="clip"] img { clip-path: inset(0 0 0 0); scale: 1; transition: none; }
+.js.jump :target .split .wi { transform: none; transition: none; }
 
 @media (max-width: 1000px) {
   .site nav a:not(.btn) { display: none; }

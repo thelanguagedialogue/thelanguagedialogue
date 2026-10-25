@@ -42,8 +42,10 @@ export const viewport: Viewport = {
 
 // Before first paint: mark that JavaScript runs (so reveal animations may hide things until they
 // scroll in) and honour reduced motion. If the page script never starts, the safety timer turns
-// the animations off so nothing stays hidden.
-const HEAD = `(function(){var r=document.documentElement;r.classList.add("js");if(matchMedia("(prefers-reduced-motion: reduce)").matches)r.classList.add("rm");setTimeout(function(){if(!r.classList.contains("motion-ready"))r.classList.add("rm")},4000)})();`;
+// the animations off so nothing stays hidden. A link to a section (/#how) gets "jump": the browser
+// lands on it at once instead of smooth-scrolling down the whole page, and that section shows
+// without the fade.
+const HEAD = `(function(){var r=document.documentElement;r.classList.add("js");if(location.hash)r.classList.add("jump");if(matchMedia("(prefers-reduced-motion: reduce)").matches)r.classList.add("rm");setTimeout(function(){if(!r.classList.contains("motion-ready"))r.classList.add("rm")},4000)})();`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const gaId = IS_LIVE ? cleanGaId(site.gaId) : "";
