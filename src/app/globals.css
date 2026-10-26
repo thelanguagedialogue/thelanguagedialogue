@@ -254,7 +254,14 @@ p { margin: 0; text-wrap: pretty; }
 .trip .copy { display: grid; gap: 16px; }
 .trip p { color: var(--ink-2); max-width: 48ch; }
 .quotes { border-top: 1px solid var(--line); }
-.quotes .wrap { padding-block: clamp(70px, 9vw, 140px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(30px, 3.6vw, 64px); }
+.quotes .wrap { padding-block: clamp(70px, 9vw, 140px); display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(30px, 3.6vw, 64px); }
+/* three across; with four quotes it is two by two; with five the second row is two thirds + one third,
+   so the longest quote goes fourth in site.json and the two columns end at about the same height */
+@media (min-width: 1001px) {
+  .quotes blockquote { grid-column: span 2; }
+  .quotes blockquote:first-of-type:nth-last-of-type(4), .quotes blockquote:first-of-type:nth-last-of-type(4) ~ blockquote { grid-column: span 3; }
+  .quotes blockquote:nth-of-type(4):nth-last-of-type(2) { grid-column: span 4; }
+}
 .quotes .head { grid-column: 1 / -1; display: grid; gap: 16px; }
 .quotes .kicker { color: var(--navy); }
 .quotes blockquote { margin: 0; display: grid; gap: 18px; align-content: start; position: relative; padding-top: 52px; }
