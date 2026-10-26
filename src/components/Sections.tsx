@@ -218,6 +218,7 @@ export function AboutBlock({ id = "about", kicker, heading, body, image, imageAl
   return (
     <section className="about" id={id}>
       <div className="wrap">
+        <div className="collage-col">
         <div className="collage">
           <figure className={`main frame${ph(image)}`} data-reveal="clip" style={{ margin: 0 }}>
             <Img src={image} alt={imageAlt} sizes="(max-width: 1000px) 90vw, 45vw" />
@@ -228,6 +229,7 @@ export function AboutBlock({ id = "about", kicker, heading, body, image, imageAl
             </figure>
           )}
           <span className="key"><KeyMark /></span>
+        </div>
         </div>
         <div className="copy">
           <span className="caps kicker" data-reveal="">{kicker}</span>

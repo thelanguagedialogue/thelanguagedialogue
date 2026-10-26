@@ -120,7 +120,7 @@ export default function Motion() {
         if (r.bottom < -200 || r.top > vh + 200) return;
         const c = r.top + r.height / 2 - vh / 2;
         let y = -c * parseFloat(el.getAttribute("data-speed") || "0");
-        if (parent.classList.contains("frame")) { const spare = el.offsetHeight - r.height; y = Math.max(-spare, Math.min(0, y - spare / 2)); }
+        if (parent.classList.contains("frame")) { const spare = Math.max(0, el.offsetHeight - parent.clientHeight); y = Math.max(-spare, Math.min(0, y - spare / 2)); }
         el.style.transform = `translate3d(0,${y.toFixed(1)}px,0)`;
       });
       if (big && sw.length) {

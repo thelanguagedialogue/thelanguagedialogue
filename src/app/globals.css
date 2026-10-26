@@ -188,6 +188,9 @@ p { margin: 0; text-wrap: pretty; }
 /* about: collage */
 .about .wrap { padding-block: clamp(80px, 11vw, 170px); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 110px); align-items: center; }
 .collage { position: relative; padding: 0 12% 18% 0; }
+/* the story is taller than the photos: on wide screens the collage rides along while you read, so no empty block opens
+   under it. Its column stretches to the story's row only, so it stops before the numbers below. */
+@media (min-width: 1001px) { .about .collage-col { align-self: stretch; } .about .collage { position: sticky; top: 120px; } }
 .collage .main { aspect-ratio: 4 / 5; }
 .collage .inset { position: absolute; right: 0; bottom: 0; width: 46%; aspect-ratio: 4 / 5; border: 8px solid var(--paper); box-shadow: 0 30px 60px -30px rgba(18,17,16,.45); }
 .collage .key { position: absolute; left: -26px; top: -26px; width: 128px; height: 128px; padding: 20px; background: var(--paper); border-radius: 50%; }
