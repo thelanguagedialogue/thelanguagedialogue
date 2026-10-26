@@ -11,8 +11,8 @@
     "lede": "One of the world’s most spoken languages. For business, for travel, and for connecting with people across cultures and communities. Private and small-group lessons with Valentina, in person around Atlanta or online.",
     "primary": "Book a free 15-minute call",
     "secondary": { "label": "Who teaches", "href": "#teacher" },
-    "image": "/media/placeholder/lesson-group.jpg",
-    "imageAlt": "A teacher laughing with two adult students around a table",
+    "image": "/media/scenes/lesson-group.jpg",
+    "imageAlt": "Valentina laughing with two students over an open textbook",
     "bar": [
       { "label": "Levels", "value": "Beginners to business" },
       { "label": "For", "value": "Adults, teens and kids" },
@@ -74,8 +74,8 @@
       "To help your kids with their Spanish homework.",
       "To travel through Spain or Latin America and understand the answers."
     ],
-    "image": "/media/placeholder/hands-notebook.jpg",
-    "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+    "image": "/media/scenes/hands-notebook.jpg",
+    "imageAlt": "Valentina’s hands mid-sentence over an open notebook and an espresso cup"
   },
   "levels": {
     "show": true,

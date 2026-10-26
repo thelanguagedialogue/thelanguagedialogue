@@ -7,8 +7,8 @@
     "lede": "Private lessons with Valentina, a native Italian with a degree in Foreign Languages from the University of Turin, and twenty years of training teams around the world. You talk from the first lesson, in the Atlanta metro area or online.",
     "primary": "Book a free 15-minute call",
     "secondary": { "label": "Meet Valentina", "href": "#about" },
-    "image": "/media/placeholder/hero-lamp-table.jpg",
-    "imageAlt": "A teacher and a student talking at a lamp-lit table",
+    "image": "/media/scenes/hero-lamp-table.jpg",
+    "imageAlt": "Valentina smiling across a lamp-lit table at a student during an evening lesson",
     "bar": [
       { "label": "Languages", "value": "Italian & Spanish · all levels\nFrench · beginners" },
       { "label": "For", "value": "Adults, teens and kids" },
@@ -58,8 +58,8 @@
   "lessons": {
     "kicker": "How lessons work",
     "heading": "Pick your *format*",
-    "image": "/media/placeholder/lesson-group.jpg",
-    "imageAlt": "A teacher laughing with two adult students around a table"
+    "image": "/media/scenes/lesson-group.jpg",
+    "imageAlt": "Valentina laughing with two students over an open textbook"
   },
   "band": {
     "label": "The method, in one line",
@@ -73,8 +73,8 @@
       "To give your kids the language their grandparents speak.",
       "To pass the Italian language test for your citizenship."
     ],
-    "image": "/media/placeholder/hands-notebook.jpg",
-    "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+    "image": "/media/scenes/hands-notebook.jpg",
+    "imageAlt": "Valentina’s hands mid-sentence over an open notebook and an espresso cup"
   },
   "about": {
     "kicker": "About",

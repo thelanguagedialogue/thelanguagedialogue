@@ -31,8 +31,8 @@
       "kicker": "How I teach",
       "heading": "Your reason first, grammar *when you need it*",
       "body": "Every student starts with a reason: a trip, a family, a job, a test, or the pleasure of it. I ask about it on the free call and build the lessons around it, so the first things you learn are the things you will say.\n\nWe talk from the first lesson. I correct you kindly and keep you talking, and grammar comes in when it helps you say what you want to say.\n\nI suggest two hours a week: enough to make real progress, light enough to keep up.",
-      "image": "/media/placeholder/hands-notebook.jpg",
-      "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+      "image": "/media/scenes/hands-notebook.jpg",
+      "imageAlt": "Valentina’s hands mid-sentence over an open notebook and an espresso cup"
     },
     {
       "id": "languages",
@@ -47,8 +47,8 @@
     "kicker": "How lessons work",
     "heading": "Pick your *format*",
     "note": "I suggest two hours a week. Enough to make real progress, light enough to keep up.",
-    "image": "/media/placeholder/lesson-group.jpg",
-    "imageAlt": "A teacher laughing with two adult students around a table"
+    "image": "/media/scenes/lesson-group.jpg",
+    "imageAlt": "Valentina laughing with two students over an open textbook"
   },
   "levels": { "show": false },
   "reviews": { "show": true, "kicker": "In their words" }

@@ -11,8 +11,8 @@
     "lede": "A few lessons before you go, built around the places you will visit and the words you will really use. With Valentina, a native Italian, online from anywhere in the US or in person around Atlanta.",
     "primary": "Book a free 15-minute call",
     "secondary": { "label": "What you learn", "href": "#learn" },
-    "image": "/media/placeholder/train-platform.jpg",
-    "imageAlt": "A traveler walking along a train platform beside a red train",
+    "image": "/media/scenes/train-platform.jpg",
+    "imageAlt": "Valentina walking along an Italian station platform beside a red regional train",
     "bar": [
       { "label": "When", "value": "A few lessons before you go" },
       { "label": "Built around", "value": "Your dates and your route" },
@@ -58,7 +58,7 @@
       "kicker": "How it works",
       "heading": "Tell me your dates, and we plan *back from there*",
       "body": "On the free 15-minute call you tell me where you are going, when you leave and where you are starting from. We count back from your departure and agree how many lessons fit.\n\nLessons are online, on video, so they work from anywhere in the US. If you live in the Atlanta metro area, we can also meet in person. Traveling as a couple or with friends? You can learn together as a small group.\n\nI suggest two hours a week, so a few weeks before the trip is a good time to start. If your flight is sooner, tell me and we make the most of the time you have.",
-      "image": "/media/placeholder/passport-map.jpg",
+      "image": "/media/scenes/passport-map.jpg",
       "imageAlt": "A passport, a folded map and a key on a stone floor"
     },
     {
@@ -83,8 +83,8 @@
       "To ask the way in Venice and understand the answer.",
       "To talk with your cousins in the town your family came from."
     ],
-    "image": "/media/placeholder/hands-notebook.jpg",
-    "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+    "image": "/media/scenes/hands-notebook.jpg",
+    "imageAlt": "Valentina’s hands mid-sentence over an open notebook and an espresso cup"
   },
   "levels": { "show": false },
   "reviews": { "show": true, "kicker": "In their words" },

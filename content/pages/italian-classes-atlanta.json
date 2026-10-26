@@ -11,8 +11,8 @@
     "lede": "Private and small-group Italian lessons with Valentina, a native Italian with a degree in Foreign Languages from the University of Turin. You talk from the first lesson, in person around Atlanta or online.",
     "primary": "Book a free 15-minute call",
     "secondary": { "label": "Who teaches", "href": "#teacher" },
-    "image": "/media/placeholder/evening-lesson.jpg",
-    "imageAlt": "A teacher smiling during an evening lesson at a lamp-lit table",
+    "image": "/media/scenes/evening-lesson.jpg",
+    "imageAlt": "Valentina explaining something at a lamp-lit table in the evening",
     "bar": [
       { "label": "Levels", "value": "Beginners to business" },
       { "label": "For", "value": "Adults, teens and kids" },
@@ -74,8 +74,8 @@
       "To give your kids the language their grandparents speak.",
       "To watch an Italian film without the subtitles."
     ],
-    "image": "/media/placeholder/hands-notebook.jpg",
-    "imageAlt": "Hands mid-sentence over a notebook and an espresso cup"
+    "image": "/media/scenes/hands-notebook.jpg",
+    "imageAlt": "Valentina’s hands mid-sentence over an open notebook and an espresso cup"
   },
   "levels": {
     "show": true,
