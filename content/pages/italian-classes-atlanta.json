@@ -42,16 +42,16 @@
       "kicker": "What a lesson looks like",
       "heading": "Your Italian, about *your life*",
       "body": "In the first lesson you already speak Italian: who you are, what you do, why you want to learn. I listen, correct you kindly and keep you talking. Grammar comes in when it helps you say what you want to say.\n\nEvery lesson is built around your reason for learning. If you are going to Sicily in June, we talk about trains, markets and dinner. If your mother-in-law is from Naples, we practice the conversations you will have at her table. If you need the citizenship test, we work toward it step by step.\n\nI suggest two hours a week. It is enough to make real progress and light enough to keep up with work and family.",
-      "image": "/media/placeholder/cafe-table.jpg",
-      "imageAlt": "An espresso cup and an open notebook on a cafe table"
+      "image": "/media/valentina/notebook.jpg",
+      "imageAlt": "Valentina writing in a notebook next to Italian and Spanish textbooks"
     },
     {
       "id": "teacher",
       "kicker": "Who teaches",
       "heading": "A native Italian who *learned by doing*",
       "body": "My name is Valentina and I’m Italian. I studied foreign languages and communication at the University of Turin, and then spent seventeen years with an Italian multinational fashion company, training and coaching store teams across Europe, the Middle East and Russia.\n\nNobody learns to run a shop floor from a textbook, and nobody learns to speak from one either. You learn by doing it, with someone who corrects you kindly and keeps you talking. That is how I teach Italian.\n\nI live in Atlanta now. I teach every lesson myself, and I also teach for four language schools.",
-      "image": "/media/placeholder/portrait.jpg",
-      "imageAlt": "Portrait of a woman in daylight by a window",
+      "image": "/media/valentina/portrait.jpg",
+      "imageAlt": "Valentina Songia, Italian, Spanish and French teacher in Atlanta",
       "button": { "label": "More about me", "href": "/about/" }
     }
   ],
@@ -90,9 +90,9 @@
       { "q": "Do you teach complete beginners?", "a": "Yes. You can start from zero, or from a few words you already know. Tell me why you want to learn and I build the first lessons around that." },
       { "q": "Can you help me prepare for the Italian citizenship language test?", "a": "Yes. Tell me which test you are taking, the level you need and your date, and we plan the lessons back from there. Speaking is part of every lesson, so the oral part does not catch you off guard." },
       { "q": "How long until I can hold a conversation in Italian?", "a": "It depends on where you start and how much you practice between lessons. You talk from the first lesson, so you notice progress early. On the free call we look at your goal and your week and agree a plan that fits." },
-      { "q": "Do you teach Italian to kids and teens?", "a": "Yes. I teach adults, teens and kids, and the lessons follow the student’s age, level and goals.\n\n[EXAMPLE] Kids can start from age 6." },
-      { "q": "Where do in-person lessons take place?", "a": "[EXAMPLE] At your home, at a quiet cafe near you, or at another place in the Atlanta metro area that works for both of us. Online lessons work from anywhere." },
-      { "q": "Can a couple or a few friends learn together?", "a": "Yes, as a small group. You practice with each other, and the lesson stays personal.\n\n[EXAMPLE] Groups are two to four people." },
+      { "q": "Do you teach Italian to kids and teens?", "a": "Yes. I teach adults, teens and kids, and the lessons follow the student’s age, level and goals.\n\nKids can start from first grade." },
+      { "q": "Where do in-person lessons take place?", "a": "At my place, or at your home for an additional fee, in the Atlanta metro area. I don’t teach in cafes or other public places: they are noisy, and you learn better somewhere quiet and relaxed. Online lessons work from anywhere." },
+      { "q": "Can a couple or a few friends learn together?", "a": "Yes, as a small group. You practice with each other, and the lesson stays personal.\n\nGroups are up to eight people." },
       { "q": "How much do Italian lessons cost?", "a": "[CONFIRM] There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." },
       { "q": "What happens in the free 15-minute call?", "a": "You tell me why you want to learn and where you are now. By the end you know your level, the format that fits your week and what the first month looks like. No obligation." }
     ]

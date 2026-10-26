@@ -210,7 +210,7 @@ export function Stats() {
 }
 
 /** About: the collage (portrait, inset photo, key), her story, signature, buttons and numbers. */
-export function AboutBlock({ id = "about", kicker, heading, body, image, imageAlt, image2, image2Alt, signature = true, video = true, videoLabel = "Hear me speak · 0:30", stats = true }: {
+export function AboutBlock({ id = "about", kicker, heading, body, image, imageAlt, image2, image2Alt, signature = true, video = true, videoLabel = "Hear me speak · 1:07", stats = true }: {
   id?: string; kicker: string; heading: string; body: string; image?: string; imageAlt?: string; image2?: string; image2Alt?: string;
   signature?: boolean; video?: boolean; videoLabel?: string; stats?: boolean;
 }) {
@@ -324,7 +324,7 @@ export function Trip({ t }: { t: { kicker: string; heading: string; text: string
   );
 }
 
-/** Student quotes. The three on the site now are examples until she sends real ones. */
+/** Quotes from a student and from two schools she teaches for (Ron Clark Academy, Listen & Learn). */
 export function Reviews({ kicker = "In their words" }: { kicker?: string }) {
   if (site.reviews.length === 0) return null;
   return (

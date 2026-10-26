@@ -80,11 +80,11 @@
     "kicker": "About",
     "heading": "Taught by someone who *learned by doing*",
     "body": "My name is Valentina, and I’m Italian. I studied foreign languages and communication at the University of Turin, spent a year studying English at the University of Glamorgan in Wales, and learned Spanish at Proyecto Español, a language school in Alicante. After that I spent seventeen years with an Italian multinational fashion company, training and coaching store teams across Europe, the Middle East and Russia.\n\nNobody learns to run a shop floor from a textbook, and nobody learns to speak from one either. You learn by doing it, with someone who corrects you kindly and keeps you talking. That is how I teach.\n\nI live in Atlanta now, and I teach every lesson myself: adults, teens and kids, one-on-one and in small groups, in person or online. I also teach for four language schools.",
-    "image": "/media/placeholder/portrait.jpg",
-    "imageAlt": "Portrait of a woman in daylight by a window",
-    "image2": "/media/placeholder/cafe-table.jpg",
-    "image2Alt": "An espresso cup and an open notebook on a cafe table",
-    "videoLabel": "Hear me speak · 0:30"
+    "image": "/media/valentina/portrait.jpg",
+    "imageAlt": "Valentina Songia, Italian, Spanish and French teacher in Atlanta",
+    "image2": "/media/valentina/notebook.jpg",
+    "image2Alt": "Valentina writing in a notebook next to Italian and Spanish textbooks",
+    "videoLabel": "Hear me speak · 1:07"
   },
   "levels": {
     "kicker": "Levels and ages",
@@ -97,8 +97,8 @@
     "text": "A few lessons before you go, built around the places you will visit and the words you will really use. Tell me your travel dates and we plan the lessons back from there.",
     "button": { "label": "Ask about your trip", "href": "/contact/" },
     "link": { "label": "How travel lessons work", "href": "/italian-for-travel/" },
-    "image": "/media/placeholder/italian-street.jpg",
-    "imageAlt": "A quiet street in a small Italian town"
+    "image": "/media/valentina/italy-door.jpg",
+    "imageAlt": "Valentina in front of a colorful painted house in Italy"
   },
   "trip": {
     "kicker": "Trips to Italy",

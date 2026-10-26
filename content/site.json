@@ -9,15 +9,15 @@
     "role": "Founder and teacher"
   },
   "contact": {
-    "email": "[CONFIRM] valentina.songia@outlook.com",
-    "phone": "[CONFIRM] +1 (943) 248-9625",
+    "email": "valentina.songia@outlook.com",
+    "phone": "+1 (943) 248-9625",
     "area": "Atlanta metro area, or online from anywhere",
     "instagram": ""
   },
   "links": {
     "booking": "[EXAMPLE] https://calendly.com/your-name/15min",
-    "whatsapp": "[CONFIRM] https://wa.me/19432489625",
-    "video": "[EXAMPLE] /media/hear-me-speak.mp4"
+    "whatsapp": "https://wa.me/19432489625",
+    "video": "/media/hear-me-speak.mp4"
   },
   "nav": [
     { "label": "Italian", "href": "/italian-classes-atlanta/" },
@@ -58,7 +58,7 @@
     {
       "title": "In person, or online?",
       "options": [
-        { "title": "In person", "text": "In the Atlanta metro area, at a place that works for both of us." },
+        { "title": "In person", "text": "At my place, or at your home for an additional fee. Somewhere quiet, not a noisy cafe." },
         { "title": "Online", "text": "Same lessons, on video. Good when you are short on time or outside the Atlanta area." }
       ]
     }
@@ -84,19 +84,19 @@
   ],
   "reviews": [
     {
-      "quote": "[EXAMPLE] I had three years of Italian on an app and could not get through a coffee order. Two months in with Valentina, I spent a week in Puglia and never switched to English.",
-      "name": "[EXAMPLE] Sarah M., Decatur",
-      "detail": "Italian, one-on-one"
+      "quote": "The students absolutely loved the class and had such a great time learning with you. We really appreciated your energy, flexibility, and the way you engaged them throughout the lesson.",
+      "name": "Dr. Aleli Vazquez",
+      "detail": "Dean of Faculty, Ron Clark Academy"
     },
     {
-      "quote": "[EXAMPLE] My daughter is eleven and used to dread Spanish at school. Now she asks when Valentina is coming, and she corrects my accent at dinner.",
-      "name": "[EXAMPLE] Daniel R., Sandy Springs",
-      "detail": "Spanish for kids"
+      "quote": "Valentina explains how to use the language in context and helps us understand the topic. When we do not understand something, she is patient and breaks down the material. I have really enjoyed learning from her.",
+      "name": "[CONFIRM] A student",
+      "detail": ""
     },
     {
-      "quote": "[EXAMPLE] I run a team in Monterrey and used to hide behind email. We practiced my real Monday call, line by line. Now I open the meeting in Spanish.",
-      "name": "[EXAMPLE] Priya K., online from Charlotte",
-      "detail": "Business Spanish"
+      "quote": "Her enthusiasm has delighted our students and made her a pleasure to work with. With no hesitation, we recommend Valentina as a language instructor.",
+      "name": "Ariadna Escobedo",
+      "detail": "Listen & Learn USA"
     }
   ],
   "showPrices": false,
