@@ -107,7 +107,31 @@ export function Statement({ kicker, text }: { kicker: string; text: string }) {
   );
 }
 
-type Lang = { native: string; name: string; accent: string; phrase: string; meaning: string; text: string; tag: string; link?: LinkT };
+type Lang = { native: string; name: string; flag?: string; accent: string; phrase: string; meaning: string; text: string; tag: string; link?: LinkT };
+
+/** Small flat flags next to the card numbers (3:2, official colours, Spain without the arms). */
+const FLAGS: Record<string, { dir: "v" | "h"; bands: [string, number][] }> = {
+  it: { dir: "v", bands: [["#009246", 1], ["#ffffff", 1], ["#ce2b37", 1]] },
+  fr: { dir: "v", bands: [["#002654", 1], ["#ffffff", 1], ["#ed2939", 1]] },
+  es: { dir: "h", bands: [["#aa151b", 1], ["#f1bf00", 2], ["#aa151b", 1]] },
+};
+
+function Flag({ code }: { code?: string }) {
+  const f = code ? FLAGS[code] : undefined;
+  if (!f) return null;
+  const total = f.bands.reduce((a, [, w]) => a + w, 0);
+  let at = 0;
+  return (
+    <svg className="flag" viewBox="0 0 30 20" width="30" height="20" aria-hidden="true" focusable="false">
+      {f.bands.map(([fill, w], i) => {
+        const start = at; at += w;
+        return f.dir === "v"
+          ? <rect key={i} x={(start / total) * 30} y="0" width={(w / total) * 30} height="20" fill={fill} />
+          : <rect key={i} x="0" y={(start / total) * 20} width="30" height={(w / total) * 20} fill={fill} />;
+      })}
+    </svg>
+  );
+}
 
 /** Homepage: the sticky word on the left, one card per language on the right. */
 export function Languages({ kicker, items }: { kicker: string; items: Lang[] }) {
@@ -125,7 +149,7 @@ export function Languages({ kicker, items }: { kicker: string; items: Lang[] }) 
           <h2 className="sr-only">{kicker}</h2>
           {items.map((l, i) => (
             <article className="lang" data-i={i} data-reveal="" key={l.name}>
-              <span className="num">{n2(i)}</span>
+              <span className="num">{n2(i)}<Flag code={l.flag} /></span>
               <span className="native" aria-hidden="true">{l.native}</span>
               <h3>{l.name}{l.accent && <> <em>{l.accent}</em></>}</h3>
               <p><T v={l.text} /></p>

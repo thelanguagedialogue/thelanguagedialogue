@@ -59,7 +59,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <div className="grain" aria-hidden="true" />
         {!IS_LIVE && (
           <div className="preview-strip">
-            Preview, not the live site<span className="more-info"> · lesson scenes made with AI from your photos, waiting for your OK · “example” = we wrote it, to be replaced · “to confirm” = your detail, waiting for your OK · not indexed by Google</span>
+            Preview, not the live site<span className="more-info"> · “example” = we wrote it, to be replaced · “to confirm” = your detail, waiting for your OK · not indexed by Google</span>
           </div>
         )}
         <Header />

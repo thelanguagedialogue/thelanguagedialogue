@@ -15,6 +15,12 @@ const AREA = [
   { "@type": "Country", name: "United States" },
 ];
 
+/** Her lesson and call hours (WhatsApp 27.10), the same as on the Google profile. */
+const HOURS = [
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "19:00" },
+  { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "08:00", closes: "14:00" },
+];
+
 /**
  * The business, once, on every page. A service-area business: no street address is published,
  * the Atlanta metro area is where in-person lessons happen, and online lessons reach the whole US
@@ -32,6 +38,7 @@ export function businessSchema(): Node {
     ...(ready(site.contact.email) ? { email: plain(site.contact.email) } : {}),
     ...(ready(site.contact.phone) ? { telephone: plain(site.contact.phone) } : {}),
     areaServed: AREA,
+    openingHoursSpecification: HOURS,
     founder: { "@id": PERSON_ID },
     knowsLanguage: ["it", "es", "fr", "en"],
     ...(ready(site.contact.instagram) ? { sameAs: [plain(site.contact.instagram)] } : {}),

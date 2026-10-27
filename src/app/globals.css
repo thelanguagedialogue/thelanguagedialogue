@@ -142,6 +142,7 @@ p { margin: 0; text-wrap: pretty; }
 .lang { min-height: 56svh; display: grid; align-content: center; gap: 14px; border-top: 1px solid var(--line); padding-block: 40px; }
 .lang:first-child { border-top: 0; }
 .lang .num { font: 400 italic 26px/1 var(--serif); color: var(--navy); }
+.lang .num .flag { display: inline-block; width: 27px; height: 18px; margin-left: 14px; vertical-align: 2px; border-radius: 2px; box-shadow: 0 0 0 1px var(--line); }
 .lang .native { display: none; font: 400 italic clamp(54px, 15vw, 80px)/1 var(--serif); letter-spacing: -.02em; }
 .lang p { font-size: 18px; color: var(--ink-2); max-width: 40ch; }
 .lang .tag { color: var(--muted); }

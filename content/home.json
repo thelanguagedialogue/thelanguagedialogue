@@ -25,6 +25,7 @@
     "items": [
       {
         "native": "Italiano",
+        "flag": "it",
         "name": "Italian",
         "accent": "",
         "phrase": "Piacere di conoscerti.",
@@ -35,6 +36,7 @@
       },
       {
         "native": "Español",
+        "flag": "es",
         "name": "Spanish",
         "accent": "",
         "phrase": "Mucho gusto.",
@@ -45,6 +47,7 @@
       },
       {
         "native": "Français",
+        "flag": "fr",
         "name": "French",
         "accent": "for beginners",
         "phrase": "Enchanté(e).",

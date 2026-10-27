@@ -203,6 +203,7 @@ content:
             fields:
               - { name: native, label: "Name in the language (e.g. Italiano)", type: string }
               - { name: name, label: Name in English, type: string }
+              - { name: flag, label: Flag, type: select, options: { values: [it, es, fr] } }
               - { name: accent, label: "Olive words after the name (e.g. for beginners)", type: string }
               - { name: phrase, label: Phrase in the language, type: string }
               - { name: meaning, label: What it means, type: string }
