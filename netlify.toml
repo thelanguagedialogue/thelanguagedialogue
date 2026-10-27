@@ -33,3 +33,19 @@
   for = "/media/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# photo sizes carry a content hash in their name (scripts/images.mjs), so a year is safe
+[[headers]]
+  for = "/_img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/brand/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/__forms.html"
+  [headers.values]
+    X-Robots-Tag = "noindex"

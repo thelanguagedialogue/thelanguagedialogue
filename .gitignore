@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# build-time image copies and their manifest (scripts/images.mjs)
+/public/_img/
+/src/generated/
+
+# netlify cli (local link = our staging site valentina-concepts-yc; relink to her site at launch)
+.netlify

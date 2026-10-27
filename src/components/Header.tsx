@@ -1,35 +1,44 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { site } from "@/lib/content";
-import { Txt } from "./Ex";
+import { bookAct, whatsappAct } from "@/lib/links";
+import { LogoLockup } from "./Logo";
+import { Btn, Arr, WhatsAppIcon } from "./Ui";
+import MenuButton from "./MenuButton";
 
-export const NAV = [
-  { href: "/italian-classes-atlanta/", label: "Italian" },
-  { href: "/spanish-classes-atlanta/", label: "Spanish" },
-  { href: "/italian-for-travel/", label: "Italian for travel" },
-  { href: "/about/", label: "About" },
-];
-
+/**
+ * The concept's header: it sits on the dark cover in cream, and turns to paper once you scroll
+ * past the cover (components/Motion.tsx toggles .solid). On narrow screens the links move into a
+ * full-screen menu; the panel is rendered here on the server and MenuButton only opens and closes it.
+ */
 export default function Header() {
+  const wa = whatsappAct();
   return (
-    <header className="border-b border-line bg-paper/95 backdrop-blur sticky top-0 z-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between gap-4 min-h-[68px]">
-        <Link href="/" className="display text-xl sm:text-2xl leading-none">
-          <Txt v={site.brandName} />
-        </Link>
-        <nav aria-label="Main" className="hidden md:flex items-center gap-6 text-[15px] font-medium">
-          {NAV.map((n) => (
-            <Link key={n.href} href={n.href} className="hover:text-olive-2">{n.label}</Link>
-          ))}
+    <header className="site">
+      <div className="wrap">
+        <Link className="brand" href="/" aria-label={`${site.brandName}, home`}><LogoLockup /></Link>
+        <nav aria-label="Main">
+          {site.nav.map((n) => <Link key={n.href} href={n.href}>{n.label}</Link>)}
+          <Btn act={bookAct()} className="btn"><span className="long">{site.buttons.book}</span><span className="short">{site.buttons.bookShort}</span></Btn>
+          <MenuButton />
         </nav>
-        <Link href="/contact/" className="btn btn-primary text-sm sm:text-base">Get in touch</Link>
       </div>
-      <nav aria-label="Main, mobile" className="md:hidden border-t border-line overflow-x-auto">
-        <div className="mx-auto max-w-6xl px-4 flex gap-5 text-sm font-medium whitespace-nowrap min-h-[44px] items-center">
-          {NAV.map((n) => (
-            <Link key={n.href} href={n.href} className="py-2">{n.label}</Link>
-          ))}
+      <div className="menu" id="menu" hidden>
+        <div className="wrap">
+          <ul>
+            <li style={{ "--i": 0 } as CSSProperties}><Link href="/">Home</Link></li>
+            {site.nav.map((n, i) => (
+              <li key={n.href} style={{ "--i": i + 1 } as CSSProperties}><Link href={n.href}>{n.label}</Link></li>
+            ))}
+            <li style={{ "--i": site.nav.length + 1 } as CSSProperties}><Link href="/contact/">Contact</Link></li>
+          </ul>
+          <div className="acts">
+            <Btn act={bookAct()} className="btn olive">{site.buttons.book} <Arr /></Btn>
+            {wa && <Btn act={wa} className="btn light"><WhatsAppIcon />{site.buttons.whatsapp}</Btn>}
+            <p className="fine">{site.footerLine}</p>
+          </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }

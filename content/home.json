@@ -1,0 +1,126 @@
+{
+  "metaTitle": "Italian & Spanish Lessons in Atlanta | The Language Dialogue",
+  "metaDescription": "Private Italian and Spanish lessons for all levels, and French for beginners, with a native Italian teacher. In the Atlanta metro area or online.",
+  "hero": {
+    "issue": ["Atlanta metro area and online", "Italiano · Español · Français"],
+    "title": "Speak Italian, Spanish\nor French the way\nyou’ll *actually* use it",
+    "lede": "Private lessons with Valentina, a native Italian with a degree in Foreign Languages from the University of Turin, and twenty years of training teams around the world. You talk from the first lesson, in the Atlanta metro area or online.",
+    "primary": "Book a free 15-minute call",
+    "secondary": { "label": "Meet Valentina", "href": "#about" },
+    "image": "/media/scenes/hero-lamp-table.jpg",
+    "imageAlt": "Valentina smiling across a lamp-lit table at a student during an evening lesson",
+    "bar": [
+      { "label": "Languages", "value": "Italian & Spanish · all levels\nFrench · beginners" },
+      { "label": "For", "value": "Adults, teens and kids" },
+      { "label": "Lessons", "value": "One-on-one or small groups" },
+      { "label": "Where", "value": "Atlanta metro area, or online from anywhere" }
+    ]
+  },
+  "statement": {
+    "kicker": "Why this works",
+    "text": "You can know a thousand words and still freeze when someone answers you. Apps and grammar drills don’t fix that. *Talking does, and here you talk from the first lesson.*"
+  },
+  "languages": {
+    "kicker": "Languages",
+    "items": [
+      {
+        "native": "Italiano",
+        "flag": "it",
+        "name": "Italian",
+        "accent": "",
+        "phrase": "Piacere di conoscerti.",
+        "meaning": "Nice to meet you.",
+        "text": "With a native speaker. From your first ciao to real conversation, for daily life, family or a trip to Italy.",
+        "tag": "Native speaker",
+        "link": { "label": "Italian lessons in Atlanta", "href": "/italian-classes-atlanta/" }
+      },
+      {
+        "native": "Español",
+        "flag": "es",
+        "name": "Spanish",
+        "accent": "",
+        "phrase": "Mucho gusto.",
+        "meaning": "Nice to meet you.",
+        "text": "One of the world’s most spoken languages. For business, for travel, and for connecting with people across cultures and communities.",
+        "tag": "Spoken in 20+ countries",
+        "link": { "label": "Spanish lessons in Atlanta", "href": "/spanish-classes-atlanta/" }
+      },
+      {
+        "native": "Français",
+        "flag": "fr",
+        "name": "French",
+        "accent": "for beginners",
+        "phrase": "Enchanté(e).",
+        "meaning": "Nice to meet you.",
+        "text": "Start from zero and talk from the first lesson. Going to France? I build the lessons around your trip.",
+        "tag": "Beginners · trip prep included",
+        "link": { "label": "", "href": "" }
+      }
+    ]
+  },
+  "lessons": {
+    "kicker": "How lessons work",
+    "heading": "Pick your *format*",
+    "image": "/media/scenes/lesson-group.jpg",
+    "imageAlt": "Valentina laughing with two students over an open textbook"
+  },
+  "band": {
+    "label": "The method, in one line",
+    "quote": "We talk from the first lesson.",
+    "accent": "Grammar comes in when you need it.",
+    "lead": "Tell me why you want to learn, and I build the lessons around it.",
+    "reasons": [
+      "To order dinner in Rome without switching to English.",
+      "To talk with your in-laws in their language.",
+      "To run the call with your team in Mexico City.",
+      "To give your kids the language their grandparents speak.",
+      "To pass the Italian language test for your citizenship."
+    ],
+    "image": "/media/scenes/hands-notebook.jpg",
+    "imageAlt": "Valentina’s hands mid-sentence over an open notebook and an espresso cup"
+  },
+  "about": {
+    "kicker": "About",
+    "heading": "Taught by someone who *learned by doing*",
+    "body": "My name is Valentina, and I’m Italian. I studied foreign languages and communication at the University of Turin, spent a year studying English at the University of Glamorgan in Wales, and learned Spanish at Proyecto Español, a language school in Alicante. After that I spent seventeen years with an Italian multinational fashion company, training and coaching store teams across Europe, the Middle East and Russia.\n\nNobody learns to run a shop floor from a textbook, and nobody learns to speak from one either. You learn by doing it, with someone who corrects you kindly and keeps you talking. That is how I teach.\n\nI live in Atlanta now, and I teach every lesson myself: adults, teens and kids, one-on-one and in small groups, in person or online. I also teach for four language schools.",
+    "image": "/media/valentina/portrait.jpg",
+    "imageAlt": "Valentina Songia, Italian, Spanish and French teacher in Atlanta",
+    "image2": "/media/valentina/notebook.jpg",
+    "image2Alt": "Valentina writing in a notebook next to Italian and Spanish textbooks",
+    "videoLabel": "Hear me speak · 1:07"
+  },
+  "levels": {
+    "kicker": "Levels and ages",
+    "heading": "Start where *you are*",
+    "agesLabel": "Who it is for"
+  },
+  "travel": {
+    "label": "For travelers",
+    "heading": "Italian, Spanish or French *for your trip*",
+    "text": "A few lessons before you go, built around the places you will visit and the words you will really use. Tell me your travel dates and we plan the lessons back from there.",
+    "button": { "label": "Ask about your trip", "href": "/contact/" },
+    "link": { "label": "How travel lessons work", "href": "/italian-for-travel/" },
+    "image": "/media/valentina/italy-door.jpg",
+    "imageAlt": "Valentina in front of a colorful painted house in Italy"
+  },
+  "trip": {
+    "kicker": "Trips to Italy",
+    "heading": "Going to Italy? I\u00a0can plan it *with\u00a0you*",
+    "text": "Besides the lessons, I put together trips to Italy around what you want to see, taste and do. Write to me, or ask on the free call.",
+    "button": { "label": "Ask about a trip to Italy", "href": "/contact/" }
+  },
+  "reviews": { "kicker": "In their words" },
+  "faq": {
+    "kicker": "Questions",
+    "heading": "Good to *know*",
+    "items": [
+      { "q": "I tried before and it didn’t stick. Why would this be different?", "a": "Many courses start with rules and leave speaking for later. Here it is the other way round. You talk from the first lesson, about things you care about, and the grammar comes in when you need it." },
+      { "q": "Do I need to know anything before I start?", "a": "No. You can start from zero. Tell me why you want to learn and I build the first lessons around that." },
+      { "q": "How often should I take lessons?", "a": "I suggest two hours a week: enough to make progress, light enough to keep up." },
+      { "q": "In person or online, which is better?", "a": "Both work the same way. In person is nice if you are in the Atlanta metro area and have the time; online saves the traffic and lets you learn from anywhere." },
+      { "q": "Do you teach teens and kids?", "a": "Yes. I teach adults, teens and kids. The lessons follow the student’s age, level and goals." },
+      { "q": "What happens in the free 15-minute call?", "a": "You tell me why you want to learn and where you are now. By the end you know your level, the format that fits your week and what the first month looks like. No obligation." },
+      { "q": "How much do lessons cost?", "a": "[CONFIRM] There is no price list here because no two plans are the same: one-on-one or a group, once or twice a week, in person or online. After the free call you get your price in writing, and you decide then." }
+    ]
+  }
+}

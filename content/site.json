@@ -1,80 +1,119 @@
 {
-  "brandName": "[EXAMPLE] Lettera Languages",
-  "tagline": "Italian and Spanish lessons for adults, in Atlanta and online",
+  "brandName": "The Language Dialogue",
+  "tagline": "Italian and Spanish lessons for all levels, and French for beginners, in the Atlanta metro area and online.",
   "liveOrigin": "",
   "gaId": "",
   "teacher": {
-    "name": "Valentina Songia"
+    "name": "Valentina Songia",
+    "firstName": "Valentina",
+    "role": "Founder and teacher"
   },
   "contact": {
-    "email": "[EXAMPLE] hello@example.com",
-    "phone": "[EXAMPLE] +1 (404) 000-0000",
-    "instagram": "",
-    "area": "Atlanta, Georgia, and online anywhere"
+    "email": "valentina.songia@outlook.com",
+    "phone": "+1 (943) 248-9625",
+    "area": "Atlanta metro area, or online from anywhere",
+    "instagram": ""
   },
-  "languages": [
-    {
-      "name": "Italian",
-      "blurb": "With a native speaker. From your first ciao to real conversation, for daily life, family or a trip to Italy.",
-      "levels": "[EXAMPLE] Beginner to advanced"
-    },
-    {
-      "name": "Spanish",
-      "blurb": "The language Atlanta speaks second. For work, for travel, or to talk with the people around you.",
-      "levels": "[EXAMPLE] Beginner to intermediate"
-    },
-    {
-      "name": "French",
-      "blurb": "The basics for a trip or a fresh start, taught the same way: by speaking.",
-      "levels": "Beginners"
-    }
+  "links": {
+    "booking": "[EXAMPLE] https://calendly.com/your-name/15min",
+    "whatsapp": "https://wa.me/19432489625",
+    "video": "/media/hear-me-speak.mp4"
+  },
+  "nav": [
+    { "label": "Italian", "href": "/italian-classes-atlanta/" },
+    { "label": "Spanish", "href": "/spanish-classes-atlanta/" },
+    { "label": "For travelers", "href": "/italian-for-travel/" },
+    { "label": "About", "href": "/about/" }
   ],
-  "rhythm": "We suggest two hours a week. It is enough to make real progress and still fit around work and family.",
+  "footerNav": [
+    { "label": "Italian classes", "href": "/italian-classes-atlanta/" },
+    { "label": "Spanish classes", "href": "/spanish-classes-atlanta/" },
+    { "label": "Italian for travel", "href": "/italian-for-travel/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "Contact", "href": "/contact/" },
+    { "label": "Privacy", "href": "/privacy/" }
+  ],
+  "footerLine": "Italian and Spanish lessons, French for beginners · adults, teens and kids · Atlanta metro area and online",
+  "buttons": {
+    "book": "Book a free call",
+    "bookShort": "Free call",
+    "whatsapp": "WhatsApp",
+    "message": "Send a message"
+  },
+  "cta": {
+    "label": "Free · 15 minutes · no obligation",
+    "title": "Start with a free 15-minute call",
+    "text": "Tell me why you want to learn. By the end of the call you know your level, the format that fits your week and what the first month looks like. Then you decide.",
+    "fine": "[CONFIRM] One teacher means a limited number of students. If my week is full, I’ll tell you when the next place opens."
+  },
+  "rhythm": "I suggest two hours a week. Enough to make real progress, light enough to keep up.",
   "formats": [
     {
-      "title": "One to one",
-      "text": "The whole lesson is built around you: your goals and your pace."
+      "title": "Just you, or a small group?",
+      "options": [
+        { "title": "One-on-one", "text": "The whole lesson is built around you: your goals and your pace." },
+        { "title": "Small group", "text": "You practice with each other, and the lesson stays personal." }
+      ]
     },
     {
-      "title": "Small groups",
-      "text": "[EXAMPLE] Two to four people. You practice with each other, and the lesson stays personal."
-    },
-    {
-      "title": "In person in Atlanta",
-      "text": "[EXAMPLE] At your home or at a place that works for both of us."
-    },
-    {
-      "title": "Online",
-      "text": "Same lessons, on video. Good when you are short on time or outside Atlanta."
+      "title": "In person, or online?",
+      "options": [
+        { "title": "In person", "text": "At my place, or at your home for an additional fee. Somewhere quiet, not a noisy cafe." },
+        { "title": "Online", "text": "Same lessons, on video. Good when you are short on time or outside the Atlanta area." }
+      ]
     }
   ],
-  "showPrices": true,
-  "prices": [
+  "formatsNote": "Any mix works: one-on-one online, a small group in person, or the other way round.",
+  "levelsText": "Every Italian, Spanish and French lesson is matched to your level and your age. Italian and Spanish run from beginner to business level. French is for beginners. Not sure where you stand? The [free 15-minute call](#contact) sorts that out.",
+  "levels": [
+    { "title": "Beginners", "text": "You start from zero, or from a few words you already know." },
+    { "title": "Intermediate", "text": "You get by. Now you build real conversation." },
+    { "title": "Advanced", "text": "Fluency, nuance and the culture behind the words." },
+    { "title": "Business", "text": "Meetings, calls and email in the language you work in." }
+  ],
+  "ages": [
+    { "title": "Adults", "text": "For work, travel, family or the pleasure of it." },
+    { "title": "Teens", "text": "Alongside school, at their own pace." },
+    { "title": "Kids", "text": "Lessons built around their age and what they like." }
+  ],
+  "stats": [
+    { "value": "20+", "text": "years training and coaching people in Europe, the Middle East, Russia and the US" },
+    { "value": "4", "text": "[CONFIRM] languages I work in: Italian, Spanish, French and English" },
+    { "value": "300+", "text": "fashion stores I worked with, from Europe to the Middle East and Russia" },
+    { "value": "4", "text": "language schools I teach for today" }
+  ],
+  "reviews": [
     {
-      "label": "[EXAMPLE] One to one",
-      "price": "[EXAMPLE] $55",
-      "note": "[EXAMPLE] Per hour, in person or online"
+      "quote": "Valentina is a wonderful teacher. She is very organized, well prepared, and specifically tailors the lessons to my learning goals. She challenges me while being very supportive and encouraging. I really enjoy my lessons with Valentina, and I highly recommend her.",
+      "name": "Patricia",
+      "detail": "Italian student, 62"
     },
     {
-      "label": "[EXAMPLE] Small group",
-      "price": "[EXAMPLE] $30",
-      "note": "[EXAMPLE] Per person per hour, 2 to 4 people"
+      "quote": "The students absolutely loved the class and had such a great time learning with you. We really appreciated your energy, flexibility, and the way you engaged them throughout the lesson.",
+      "name": "Dr. Aleli Vazquez",
+      "detail": "Dean of Faculty, Ron Clark Academy"
     },
     {
-      "label": "[EXAMPLE] Travel package",
-      "price": "[EXAMPLE] $390",
-      "note": "[EXAMPLE] 8 online lessons built around your trip"
+      "quote": "Valentina Songia is a very effective teacher. She’s patient and supportive. I feel confident practicing my español by ordering in restaurants and greeting others. She meets us where we are in our progress and doesn’t judge. I look forward to our class each week.",
+      "name": "Felicia",
+      "detail": "Spanish student"
+    },
+    {
+      "quote": "Valentina explains how to use the language in context and helps us understand the topic. When we do not understand something, she is patient and breaks down the material. I have really enjoyed learning from her.",
+      "name": "Stella",
+      "detail": "Italian student"
+    },
+    {
+      "quote": "I’ve really enjoyed taking in-person Italian lessons with Valentina Songia, who is an excellent teacher and incredibly patient. My goal is to become more confident speaking Italian and more comfortable interacting with locals when traveling in Italy, and Valentina has made learning both enjoyable and rewarding. I strongly believe that personalized, face-to-face instruction is far more effective than language apps or online courses, and I highly recommend Valentina to anyone interested in learning Italian.",
+      "name": "Bill",
+      "detail": "Italian student, 56"
+    },
+    {
+      "quote": "Her enthusiasm has delighted our students and made her a pleasure to work with. With no hesitation, we recommend Valentina as a language instructor.",
+      "name": "Catherine Geller",
+      "detail": "Listen & Learn New York"
     }
   ],
-  "testimonials": [
-    {
-      "quote": "[EXAMPLE] After three months with Valentina I ordered dinner in Rome without switching to English once.",
-      "name": "[EXAMPLE] Sarah, Decatur"
-    },
-    {
-      "quote": "[EXAMPLE] She makes you talk from minute one. It is the only way it ever worked for me.",
-      "name": "[EXAMPLE] Michael, Buckhead"
-    }
-  ],
-  "availability": "[EXAMPLE] Weekday mornings and evenings, Saturday mornings"
+  "showPrices": false,
+  "prices": []
 }

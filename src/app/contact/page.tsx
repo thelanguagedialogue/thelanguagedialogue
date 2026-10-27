@@ -1,49 +1,60 @@
 import type { Metadata } from "next";
-import { page, plain, site } from "@/lib/content";
-import { IS_LIVE, robotsFor } from "@/lib/site";
-import { breadcrumbSchema, jsonLd, socialCard } from "@/lib/schema";
+import { file, site, parse, plain } from "@/lib/content";
+import { IS_LIVE } from "@/lib/site";
+import { breadcrumbSchema, jsonLd, pageMeta } from "@/lib/schema";
+import { bookAct, whatsappAct } from "@/lib/links";
 import { cleanGaId } from "@/lib/track";
-import { Container, Eyebrow, Breadcrumbs } from "@/components/Blocks";
-import { Txt, Paras } from "@/components/Ex";
+import { PageHead } from "@/components/Sections";
+import { T } from "@/components/Text";
+import { Btn, Arr, WhatsAppIcon, JsonLd } from "@/components/Ui";
 import InquiryForm from "@/components/InquiryForm";
 
+// Contact: book the free call, WhatsApp, or the inquiry form (her fields from the call).
+// Text: content/contact.json; links and contact details: content/site.json.
+const c = file("contact.json");
 const PATH = "/contact/";
-const c = page("contact");
 
-export const metadata: Metadata = {
-  title: plain(c.metaTitle),
-  description: plain(c.metaDescription),
-  alternates: { canonical: PATH },
-  robots: robotsFor(true),
-  openGraph: socialCard({ title: plain(c.metaTitle), description: plain(c.metaDescription), path: PATH }),
-};
+export const metadata: Metadata = pageMeta({ title: c.metaTitle, description: c.metaDescription, path: PATH });
 
 export default function Contact() {
+  const wa = whatsappAct();
+  const email = parse(site.contact.email).text;
+  const phone = parse(site.contact.phone).text;
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([{ label: "Contact" }])) }} />
-      <Breadcrumbs crumbs={[{ label: "Contact" }]} />
-      <section className="pt-10 pb-16">
-        <Container className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
-          <div>
-            <Eyebrow><Txt v={c.eyebrow} /></Eyebrow>
-            <h1 className="mt-3"><Txt v={c.title} /></h1>
-            <Paras v={c.intro} className="mt-6 text-lg text-ink-2" />
-            <dl className="mt-8 space-y-4 text-ink-2">
-              {site.contact.email && (
-                <div><dt className="text-sm text-muted">Email</dt><dd><a className="underline" href={`mailto:${plain(site.contact.email)}`}><Txt v={site.contact.email} /></a></dd></div>
+      <JsonLd data={jsonLd(breadcrumbSchema([{ label: "Contact", href: PATH }]))} />
+      <PageHead
+        hero={c.hero}
+        crumb="Contact"
+        actions={<>
+          <Btn act={bookAct()} className="btn olive">{site.buttons.book} <Arr /></Btn>
+          {wa && <Btn act={wa} className="btn light"><WhatsAppIcon />{site.buttons.whatsapp}</Btn>}
+          <a className="btn light" href="#message">{site.buttons.message}</a>
+        </>}
+      />
+      <section className="contact" id="book">
+        <div className="wrap">
+          <div className="side">
+            <span className="caps kicker" data-reveal="">{c.side.kicker}</span>
+            <p data-reveal=""><T v={c.side.text} /></p>
+            <dl data-reveal="">
+              {phone && (
+                <div><dt>Phone or WhatsApp</dt><dd><a href={`tel:${phone.replace(/[^+\d]/g, "")}`}><T v={site.contact.phone} /></a></dd></div>
               )}
-              {site.contact.phone && (
-                <div><dt className="text-sm text-muted">Phone or WhatsApp</dt><dd><Txt v={site.contact.phone} /></dd></div>
+              {email && (
+                <div><dt>Email</dt><dd><a href={`mailto:${email}`}><T v={site.contact.email} /></a></dd></div>
               )}
-              <div><dt className="text-sm text-muted">Where</dt><dd><Txt v={site.contact.area} /></dd></div>
-              <div><dt className="text-sm text-muted">Usually available</dt><dd><Txt v={site.availability} /></dd></div>
+              <div><dt>Where</dt><dd><T v={site.contact.area} /></dd></div>
+              <div><dt>The first step</dt><dd>A free 15-minute call, no obligation</dd></div>
             </dl>
+            <p data-reveal=""><T v={site.cta.fine} /></p>
           </div>
-          <div className="bg-paper-2 border border-line p-6 sm:p-8 rounded-sm">
-            <InquiryForm email={plain(site.contact.email)} gaId={IS_LIVE ? cleanGaId(site.gaId) : ""} />
+          <div className="formcard" id="message" data-reveal="">
+            <h2><T v={c.form.heading} /></h2>
+            <p><T v={c.form.text} /></p>
+            <InquiryForm email={plain(site.contact.email)} gaId={IS_LIVE ? cleanGaId(site.gaId) : ""} button={c.form.button} note={c.form.note} />
           </div>
-        </Container>
+        </div>
       </section>
     </>
   );

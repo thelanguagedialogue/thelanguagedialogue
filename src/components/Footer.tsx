@@ -1,47 +1,29 @@
 import Link from "next/link";
-import { site, plain } from "@/lib/content";
-import { Txt } from "./Ex";
-import { NAV } from "./Header";
+import { site, parse } from "@/lib/content";
+import { T } from "./Text";
 
+/** The concept's footer: the name, big, then one line and the links. Only one of the two
+ *  wordmarks shows at a time (one line on wide screens, two lines on phones), so both carry the
+ *  name as alt text: crawlers flag empty alt, and a screen reader only meets the visible one. */
 export default function Footer() {
-  const ig = plain(site.contact.instagram);
-  const igHandle = ig.replace(/^https?:\/\/(www\.)?instagram\.com\//, "").replace(/\/$/, "");
+  const email = parse(site.contact.email).text;
   return (
-    <footer className="mt-20 bg-ink text-paper">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid gap-10 md:grid-cols-3">
-        <div>
-          <div className="display text-2xl"><Txt v={site.brandName} /></div>
-          <p className="mt-3 text-paper/80 max-w-xs"><Txt v={site.tagline} /></p>
-          <p className="mt-4 text-paper/70 text-sm"><Txt v={site.contact.area} /></p>
+    <footer>
+      <div className="wrap">
+        <div className="giant">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="logo-svg one" src="/brand/wordmark-one-line.svg" alt={site.brandName} width={25546} height={1773} loading="lazy" decoding="async" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="logo-svg two" src="/brand/wordmark-two-line.svg" alt={site.brandName} width={14502} height={3835} loading="lazy" decoding="async" />
         </div>
-        <div>
-          <h3 className="text-base font-semibold text-paper/60 uppercase tracking-wide" style={{ fontFamily: "var(--font-body)" }}>Lessons</h3>
-          <ul className="mt-3 space-y-2">
-            {NAV.map((n) => (
-              <li key={n.href}><Link href={n.href} className="hover:underline">{n.label}</Link></li>
-            ))}
-            <li><Link href="/contact/" className="hover:underline">Contact</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-base font-semibold text-paper/60 uppercase tracking-wide" style={{ fontFamily: "var(--font-body)" }}>Contact</h3>
-          <ul className="mt-3 space-y-2">
-            {site.contact.email && (
-              <li><a href={`mailto:${plain(site.contact.email)}`} className="hover:underline"><Txt v={site.contact.email} /></a></li>
-            )}
-            {site.contact.phone && (
-              <li><a href={`tel:${plain(site.contact.phone).replace(/[^+\d]/g, "")}`} className="hover:underline"><Txt v={site.contact.phone} /></a></li>
-            )}
-            {ig && (
-              <li><a href={ig.startsWith("http") ? ig : `https://instagram.com/${igHandle}`} className="hover:underline" rel="noopener">Instagram{igHandle ? ` @${igHandle}` : ""}</a></li>
-            )}
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-paper/15">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 py-5 flex flex-wrap justify-between gap-3 text-sm text-paper/60">
-          <span>&copy; {new Date().getFullYear()} <Txt v={site.brandName} /></span>
-          <Link href="/privacy/" className="hover:underline">Privacy</Link>
+        <div className="row2">
+          <p className="fine">
+            {site.footerLine}
+            {email && <> · <a href={`mailto:${email}`}><T v={site.contact.email} /></a></>}
+          </p>
+          <nav aria-label="Footer">
+            {site.footerNav.map((n) => <Link key={n.href} href={n.href}>{n.label}</Link>)}
+          </nav>
         </div>
       </div>
     </footer>

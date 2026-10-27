@@ -1,0 +1,19 @@
+{
+  "metaTitle": "Contact Valentina | Book a Free 15-Minute Call",
+  "metaDescription": "Book a free 15-minute call or send a message about Italian, Spanish or French lessons in the Atlanta metro area or online. Valentina replies herself.",
+  "hero": {
+    "issue": ["Contact", "Free · 15 minutes · no obligation"],
+    "title": "Start with a free *15-minute call*",
+    "lede": "Tell me why you want to learn. By the end of the call you know your level, the format that fits your week and what the first month looks like. Then you decide."
+  },
+  "side": {
+    "kicker": "Other ways",
+    "text": "Prefer WhatsApp or email? Use whichever is easier for you. I read and answer every message myself, and I take lessons and calls Monday to Friday from 8 am to 7 pm, and Saturday from 8 am to 2 pm."
+  },
+  "form": {
+    "heading": "Or send a *message*",
+    "text": "Fill this in and it comes straight to my inbox. I reply with a few times for the free call, or with the answer to your question.",
+    "button": "Send my message",
+    "note": "Your details are used only to reply to you."
+  }
+}
