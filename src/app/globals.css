@@ -261,6 +261,12 @@ p { margin: 0; text-wrap: pretty; }
   .quotes blockquote { grid-column: span 2; }
   .quotes blockquote:first-of-type:nth-last-of-type(4), .quotes blockquote:first-of-type:nth-last-of-type(4) ~ blockquote { grid-column: span 3; }
   .quotes blockquote:nth-of-type(4):nth-last-of-type(2) { grid-column: span 4; }
+  /* six or more: three columns filled top to bottom, so the long quote leaves no hole beside it;
+     site.json order goes column by column (two per column, the longest with the shortest) */
+  .quotes .wrap:has(> blockquote:nth-of-type(6)) { display: block; columns: 3; column-gap: clamp(30px, 3.6vw, 64px); }
+  .quotes .wrap:has(> blockquote:nth-of-type(6)) .head { column-span: all; margin-bottom: clamp(30px, 3.6vw, 64px); }
+  .quotes .wrap:has(> blockquote:nth-of-type(6)) blockquote { display: inline-grid; width: 100%; margin-bottom: clamp(30px, 3.6vw, 64px); } /* inline: Chrome puts the first column's absolute quote mark up at the heading otherwise */
+  .quotes .wrap:has(> blockquote:nth-of-type(6)) blockquote:last-of-type { margin-bottom: 0; }
 }
 .quotes .head { grid-column: 1 / -1; display: grid; gap: 16px; }
 .quotes .kicker { color: var(--navy); }
