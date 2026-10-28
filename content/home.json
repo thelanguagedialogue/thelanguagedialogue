@@ -100,8 +100,8 @@
     "text": "A few lessons before you go, built around the places you will visit and the words you will really use. Tell me your travel dates and we plan the lessons back from there.",
     "button": { "label": "Ask about your trip", "href": "/contact/" },
     "link": { "label": "How travel lessons work", "href": "/italian-for-travel/" },
-    "image": "/media/valentina/italy-door.jpg",
-    "imageAlt": "Valentina in front of a colorful painted house in Italy"
+    "image": "/media/scenes/italy-vineyards.jpg",
+    "imageAlt": "Vineyards on the hills of Italy, with a village on the hilltop"
   },
   "trip": {
     "kicker": "Trips to Italy",
