@@ -45,6 +45,12 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+# Valentina's email kit (signature + price email): a tool page for her, not part of the site
+[[headers]]
+  for = "/brand/email/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 [[headers]]
   for = "/__forms.html"
   [headers.values]
