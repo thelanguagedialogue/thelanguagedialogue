@@ -51,6 +51,12 @@
   [headers.values]
     X-Robots-Tag = "noindex"
 
+# Valentina's LinkedIn kit (cover image + profile texts): a tool page for her, not part of the site
+[[headers]]
+  for = "/brand/linkedin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 [[headers]]
   for = "/__forms.html"
   [headers.values]

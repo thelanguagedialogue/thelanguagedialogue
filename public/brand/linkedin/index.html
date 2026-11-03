@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LinkedIn kit · The Language Dialogue</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Inter:wght@400;500;600&family=Special+Elite&display=swap" rel="stylesheet">
+<!--
+  Valentina's LinkedIn kit: cover image + the texts for her profile, in the order she pastes them.
+  Not part of the site: no links point here, noindex, and the sitemap skips it.
+  LinkedIn fields take plain text only, so the Copy buttons copy plain text.
+-->
+<style>
+  :root { --navy:#2b3a5c; --olive:#76803f; --cream:#ece6d8; --paper:#f4efe6; --ink:#121110; --line:#d8d0bf; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.6 Inter, Arial, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
+  .brand { display:block; width:200px; margin-bottom:32px; }
+  h1 { font:500 clamp(34px,6vw,48px)/1.1 "Bodoni Moda", Georgia, serif; color:var(--navy); margin:0 0 12px; }
+  h2 { font:500 30px/1.2 "Bodoni Moda", Georgia, serif; color:var(--navy); margin:0 0 6px; }
+  .lede { margin:0 0 8px; color:#3b3a36; }
+  .tag { font:14px/1.4 "Special Elite", "Courier New", monospace; color:var(--olive); letter-spacing:.02em; margin:0 0 4px; }
+  section { border-top:2px solid var(--olive); padding-top:28px; margin-top:40px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:6px; padding:20px 22px; margin:16px 0 14px; white-space:pre-wrap; font:15px/1.6 Inter, Arial, sans-serif; color:#222; }
+  .label { font-weight:600; color:var(--navy); margin:22px 0 0; }
+  .cover { display:block; width:100%; height:auto; border-radius:6px; border:1px solid var(--line); margin:16px 0 14px; }
+  button, .btn { display:inline-block; font:600 15px/1 Inter, Arial, sans-serif; color:#fff; background:var(--navy); border:0; border-radius:4px; padding:14px 22px; cursor:pointer; text-decoration:none; }
+  button:hover, .btn:hover { background:#1c2438; }
+  button.done { background:var(--olive); }
+  ol { padding-left:22px; margin:18px 0 0; }
+  li { margin-bottom:8px; }
+  .note { font-size:14px; color:#55534c; margin-top:14px; }
+  table.fields { border-collapse:collapse; width:100%; margin:14px 0 6px; font-size:15px; }
+  table.fields td { border-bottom:1px solid var(--line); padding:8px 6px; vertical-align:top; }
+  table.fields td:first-child { color:#55534c; width:38%; }
+</style>
+</head>
+<body>
+<main>
+  <img class="brand" src="/brand/wordmark-two-line.svg" alt="The Language Dialogue">
+  <h1>Your LinkedIn kit</h1>
+  <p class="lede">Everything for your LinkedIn profile, in the order you paste it: a cover image in your colours, your headline, your About, The Language Dialogue as your new position, your services and one short post. About 10 minutes, on the computer or in the app.</p>
+  <p class="note">Your current jobs stay as they are. You only add, nothing gets deleted.</p>
+
+  <section>
+    <p class="tag">1 · cover image</p>
+    <h2>The picture at the top</h2>
+    <img class="cover" src="/brand/linkedin/linkedin-cover.png" width="1584" height="396" alt="LinkedIn cover: We talk from the first lesson. Italiano, Español, Français. thelanguagedialogue.com">
+    <a class="btn" href="/brand/linkedin/linkedin-cover.png" download="TheLanguageDialogue-LinkedIn-cover.png">Download the image</a>
+    <ol>
+      <li>Open your profile and click the <b>camera / pencil</b> on the grey area at the top (the background photo).</li>
+      <li>Choose <b>Upload photo</b>, pick the image you downloaded, then <b>Apply</b>.</li>
+    </ol>
+    <p class="note">The left side is empty on purpose: your own photo sits there. On the phone, press and hold the image above and choose Save to Photos.</p>
+  </section>
+
+  <section>
+    <p class="tag">2 · headline</p>
+    <h2>The line under your name</h2>
+    <div class="card" id="headline">Italian &amp; Spanish teacher in Atlanta and online · French for beginners · Founder, The Language Dialogue</div>
+    <button type="button" data-copy="headline">Copy headline</button>
+    <ol>
+      <li>Click the <b>pencil</b> next to your name.</li>
+      <li>Paste it in <b>Headline</b> and click <b>Save</b>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="tag">3 · website</p>
+    <h2>Your website on the profile</h2>
+    <div class="card" id="website">https://thelanguagedialogue.com</div>
+    <button type="button" data-copy="website">Copy link</button>
+    <ol>
+      <li>Under your name, click <b>Contact info</b>, then the <b>pencil</b>.</li>
+      <li><b>Add website</b>: paste the link, type <b>Business</b> (or Personal), then <b>Save</b>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="tag">4 · about</p>
+    <h2>Your About</h2>
+    <div class="card" id="about">I'm Valentina, a native Italian. I teach Italian and Spanish at all levels and French for beginners, to adults, teens and kids, in the Atlanta metro area and online.
+
+For seventeen years I worked for an Italian multinational fashion company, training and coaching store teams across Europe, the Middle East and Russia, in more than 300 stores. Nobody learns to run a shop floor from a textbook, and nobody learns to speak from one either. You learn by doing it, with someone who corrects you kindly and keeps you talking. That is how I teach.
+
+We talk from the first lesson, and grammar comes in when it helps you say what you want to say. Every student starts with a reason: a trip, a family, a job, the Italian citizenship test, or just the pleasure of it. I build the lessons around it.
+
+I studied foreign languages and communication at the University of Turin, English at the University of Glamorgan in Wales, and Spanish at Proyecto Español in Alicante. Today I also teach for four language schools.
+
+The first call is free, 15 minutes: thelanguagedialogue.com</div>
+    <button type="button" data-copy="about">Copy About</button>
+    <ol>
+      <li>Scroll to <b>About</b> and click its <b>pencil</b>. No About yet? Click <b>Add profile section</b> → <b>Add about</b>.</li>
+      <li>Paste it and click <b>Save</b>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="tag">5 · new position</p>
+    <h2>The Language Dialogue in your Experience</h2>
+    <p>In <b>Experience</b> click <b>+</b> → <b>Add position</b> and fill it in like this:</p>
+    <table class="fields">
+      <tr><td>Title</td><td>Founder &amp; Language Teacher</td></tr>
+      <tr><td>Employment type</td><td>Self-employed</td></tr>
+      <tr><td>Company or organization</td><td>The Language Dialogue</td></tr>
+      <tr><td>I am currently working in this role</td><td>tick it</td></tr>
+      <tr><td>Start date</td><td>October 2026</td></tr>
+      <tr><td>Location</td><td>Atlanta, Georgia, United States</td></tr>
+      <tr><td>Location type</td><td>Hybrid</td></tr>
+    </table>
+    <p class="label">Description</p>
+    <div class="card" id="experience">Private Italian and Spanish lessons at all levels, and French for beginners, for adults, teens and kids. One-on-one or small groups, in person in the Atlanta metro area or online.
+
+We talk from the first lesson. I also prepare students for trips to Italy and for the Italian citizenship language test.
+
+Free 15-minute call: thelanguagedialogue.com</div>
+    <button type="button" data-copy="experience">Copy description</button>
+    <ol>
+      <li>Paste it in <b>Description</b>.</li>
+      <li>Under <b>Media</b> click <b>Add media</b> → <b>Add a link</b> and paste <b>https://thelanguagedialogue.com</b>.</li>
+      <li>Click <b>Save</b>. If LinkedIn asks whether to update your headline, say <b>No</b>: you already set it in step 2.</li>
+    </ol>
+  </section>
+
+  <section>
+    <p class="tag">6 · services</p>
+    <h2>Your services</h2>
+    <p>This makes you show up when people on LinkedIn look for a teacher.</p>
+    <ol>
+      <li>Under your name click <b>Open to</b> → <b>Providing services</b>.</li>
+      <li>Type <b>tutor</b> and <b>language</b> in the services box and pick the ones that fit.</li>
+      <li>Location: <b>Atlanta</b>, and say <b>yes</b> to working remotely (that covers online lessons).</li>
+      <li>Paste this in the description and click <b>Next</b>, then choose <b>All LinkedIn members</b>:</li>
+    </ol>
+    <div class="card" id="services">Private Italian and Spanish lessons at all levels, and French for beginners. Adults, teens and kids, one-on-one or small groups, in person in the Atlanta metro area or online. We talk from the first lesson. Free 15-minute call at thelanguagedialogue.com</div>
+    <button type="button" data-copy="services">Copy services text</button>
+  </section>
+
+  <section>
+    <p class="tag">7 · the post</p>
+    <h2>Tell people</h2>
+    <p>Last step, once the profile is ready. Click <b>Start a post</b>, paste this, and add a photo of you teaching or the short video from the website (a photo of you gets more people to read it than a link).</p>
+    <div class="card" id="post">For seventeen years I trained store teams for an Italian fashion company, across Europe, the Middle East and Russia. One thing I learned: nobody learns from a textbook. You learn by doing it, with someone who keeps you talking.
+
+That is how I teach languages, and now my lessons have a name: The Language Dialogue.
+
+Italian and Spanish at all levels, French for beginners. Adults, teens and kids, in person in Atlanta or online. We talk from the first lesson.
+
+If you, or someone you know, wants to learn, the first call is free:
+thelanguagedialogue.com</div>
+    <button type="button" data-copy="post">Copy post</button>
+  </section>
+</main>
+<script>
+  // LinkedIn fields take plain text, so copy plain text; older browsers fall back to select + copy.
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    var label = btn.textContent;
+    btn.addEventListener("click", function () {
+      var node = document.getElementById(btn.getAttribute("data-copy"));
+      var text = node.innerText;
+      var done = function () {
+        btn.textContent = "Copied! Now paste it in LinkedIn";
+        btn.classList.add("done");
+        setTimeout(function () { btn.textContent = label; btn.classList.remove("done"); }, 4000);
+      };
+      var fallback = function () {
+        var range = document.createRange(); range.selectNodeContents(node);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        sel.removeAllRanges();
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  });
+</script>
+</body>
+</html>
