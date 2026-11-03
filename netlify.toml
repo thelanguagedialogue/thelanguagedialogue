@@ -40,8 +40,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Long cache only for the two footer wordmarks. Not /brand/*: that also cached the kit pages
+# and their 404s for 7 days, so a browser that saw a 404 before a deploy kept showing it.
 [[headers]]
-  for = "/brand/*"
+  for = "/brand/wordmark-one-line.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/brand/wordmark-two-line.svg"
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
