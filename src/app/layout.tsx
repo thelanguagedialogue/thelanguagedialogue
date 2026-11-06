@@ -31,6 +31,8 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   formatDetection: { telephone: false, email: false, address: false },
+  // Google Search Console ownership (URL-prefix property https://thelanguagedialogue.com/). Keep it: removing it unverifies the site.
+  verification: { google: "vVSWwjMtYNepjscKCEqVs-ZtIK9uV7i9OKulH4wjXd0" },
 };
 
 export const viewport: Viewport = {
