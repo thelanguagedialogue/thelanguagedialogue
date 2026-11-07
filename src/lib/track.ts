@@ -23,9 +23,13 @@ function allowed(): boolean {
   }
 }
 
-function gtag(...args: unknown[]) {
+// gtag.js only acts on the Arguments object, a plain array is ignored (no config, no hits).
+// So this pushes `arguments`, exactly like Google's own snippet.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function gtag(..._args: unknown[]) {
   const w = window as unknown as DL;
-  (w.dataLayer = w.dataLayer || []).push(args);
+  // eslint-disable-next-line prefer-rest-params
+  (w.dataLayer = w.dataLayer || []).push(arguments);
 }
 
 let booted = "";
